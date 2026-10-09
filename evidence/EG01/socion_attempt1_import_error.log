@@ -1,0 +1,21 @@
+test_socion (unittest.loader._FailedTest.test_socion) ... ERROR
+
+======================================================================
+ERROR: test_socion (unittest.loader._FailedTest.test_socion)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_socion
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/vendor/socionics/baseline/HLE_Rebuild_R21B/tests/test_socion.py", line 19, in <module>
+    from .reference_socion import complete_round
+ImportError: attempted relative import with no known parent package
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

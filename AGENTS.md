@@ -1,6 +1,6 @@
 # Engine Gaming build instructions
 
-User authorized EG01 through EG08 on 2026-10-09. Follow project_sources/Engine_Gaming_Build_Reference_v1_0.txt and its original DOCX. Continue accepted batches without per-batch prompts.
+User authorized EG01 through EG08 on 2026-10-09. Follow project_sources/Engine_Gaming_Build_Reference_v1_0.txt (extracted from the user-supplied original DOCX; binary GitHub upload was rejected by automatic approval review). Continue accepted batches without per-batch prompts.
 
 The exact research source is the pinned submodule vendor/socionics. All source-relative paths in the reference resolve there. Preserve its complete tree and sealed baseline unchanged, including licenses, evidence and research terminal state. No Phase 7, replenishment, altered prices or theoretical closures. Python standard library and exact integer engine structures only.
 

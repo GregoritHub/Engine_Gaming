@@ -2,12 +2,18 @@
   "schema": "engine-gaming-run-v1",
   "plan_version": "1.0",
   "status": "in_progress",
-  "current_batch": "EG01",
-  "completed_batches": [],
+  "current_batch": "EG02",
+  "completed_batches": [
+    "EG01"
+  ],
   "source_commit": "ab674a36e9234dcbf46634367bfc2b42b8b3cd18",
   "source_tree": "294edf4170efa127814b99a999ecd52702b9a563",
   "run_id": "eg-20261009-0804",
-  "lease_expires_at": "2026-10-09T08:39:16.854087+00:00",
-  "next_step": "Complete frozen EG01 selected regression and mechanism inventory",
-  "blocker": null
+  "lease_expires_at": "2026-10-09T08:44:26.699962+00:00",
+  "next_step": "Implement and verify contracts/EG02_FOL_Contract_v1.md",
+  "blocker": null,
+  "acceptance_evidence": [
+    "docs/EG01_Record.md",
+    "evidence/EG01/SHA256.json"
+  ]
 }

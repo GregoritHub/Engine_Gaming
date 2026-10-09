@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "scenario": "prepared timed-maintenance opportunity",
+  "automatic_recipe": "workflow-contemplate-accumulation-v1",
+  "downstream_next_task": "handover",
+  "automatic_selections_audited": 1,
+  "checkpoint_restore_exact": true,
+  "shell": {
+    "name": "Contemplate",
+    "face": "accumulation",
+    "effect": "approval",
+    "origin_mode": "generated",
+    "deformed_admission_spent": 38,
+    "bypass_admission_spent": 38,
+    "corrected_admission_spent": 38,
+    "correction_spent": 29,
+    "blocked": "unavailable",
+    "corrected_next_task": "handover",
+    "bypass_next_task": "handover",
+    "rejection": "workflow Shell admission disagrees with paid encounter"
+  },
+  "scope": "documentation smoke demonstration, not the 54-job release suite"
+}

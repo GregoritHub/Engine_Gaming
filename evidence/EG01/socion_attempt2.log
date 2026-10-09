@@ -1,0 +1,37 @@
+test_active_steps_do_not_iterate_global_history_or_unrelated_studies (tests.test_socion.Socion.test_active_steps_do_not_iterate_global_history_or_unrelated_studies) ... ok
+test_affected_queue_does_not_schedule_other_items (tests.test_socion.Socion.test_affected_queue_does_not_schedule_other_items) ... ok
+test_all_demo_prefixes_continue_exactly (tests.test_socion.Socion.test_all_demo_prefixes_continue_exactly) ... ok
+test_all_type_pairs_and_price_controls_have_real_reception (tests.test_socion.Socion.test_all_type_pairs_and_price_controls_have_real_reception) ... ok
+test_ambiguous_and_unknown_messages_are_not_interpreted (tests.test_socion.Socion.test_ambiguous_and_unknown_messages_are_not_interpreted) ... ok
+test_both_directions_use_a_lesson_on_other_object (tests.test_socion.Socion.test_both_directions_use_a_lesson_on_other_object) ... ok
+test_both_participants_learn_from_their_own_consequences (tests.test_socion.Socion.test_both_participants_learn_from_their_own_consequences) ... ok
+test_complete_two_way_exchange_and_return (tests.test_socion.Socion.test_complete_two_way_exchange_and_return) ... ok
+test_declare_rejects_identical_actors_and_late_round (tests.test_socion.Socion.test_declare_rejects_identical_actors_and_late_round) ... ok
+test_delivery_alone_is_not_retention_or_understanding (tests.test_socion.Socion.test_delivery_alone_is_not_retention_or_understanding) ... ok
+test_duplicate_command_does_not_charge_twice (tests.test_socion.Socion.test_duplicate_command_does_not_charge_twice) ... ok
+test_energy_and_time_each_independently_block_reception (tests.test_socion.Socion.test_energy_and_time_each_independently_block_reception) ... ok
+test_evaluator_has_no_participant_delivery_or_policy_effect (tests.test_socion.Socion.test_evaluator_has_no_participant_delivery_or_policy_effect) ... ok
+test_exchange_changes_action_and_learning_against_no_query (tests.test_socion.Socion.test_exchange_changes_action_and_learning_against_no_query) ... ok
+test_failed_round_is_not_erased_by_later_success (tests.test_socion.Socion.test_failed_round_is_not_erased_by_later_success) ... ok
+test_foreign_observation_cannot_be_received (tests.test_socion.Socion.test_foreign_observation_cannot_be_received) ... ok
+test_full_and_occurrence_observation_access_are_distinct (tests.test_socion.Socion.test_full_and_occurrence_observation_access_are_distinct) ... ok
+test_hidden_change_cannot_select_a_different_action (tests.test_socion.Socion.test_hidden_change_cannot_select_a_different_action) ... ok
+test_independent_full_history_round_comparison (tests.test_socion.Socion.test_independent_full_history_round_comparison) ... ok
+test_interleaved_or_changed_reception_is_rejected_without_charge (tests.test_socion.Socion.test_interleaved_or_changed_reception_is_rejected_without_charge) ... ok
+test_matched_lesson_access_changes_replies_and_heldout_actions (tests.test_socion.Socion.test_matched_lesson_access_changes_replies_and_heldout_actions) ... ok
+test_missing_return_is_unassessed_and_path_budget_is_separate (tests.test_socion.Socion.test_missing_return_is_unassessed_and_path_budget_is_separate) ... ok
+test_partial_memory_and_crux_continue_without_refunds (tests.test_socion.Socion.test_partial_memory_and_crux_continue_without_refunds) ... ok
+test_partial_reception_preserves_plan_and_exact_charges (tests.test_socion.Socion.test_partial_reception_preserves_plan_and_exact_charges) ... ok
+test_partly_drained_assessment_queue_restores (tests.test_socion.Socion.test_partly_drained_assessment_queue_restores) ... ok
+test_pending_decision_cannot_be_skipped (tests.test_socion.Socion.test_pending_decision_cannot_be_skipped) ... ok
+test_policy_is_pure_and_has_no_world_or_assessor_import (tests.test_socion.Socion.test_policy_is_pure_and_has_no_world_or_assessor_import) ... ok
+test_return_can_pass_while_cost_path_fails (tests.test_socion.Socion.test_return_can_pass_while_cost_path_fails) ... ok
+test_reverse_scheduler_still_has_independent_successful_goals (tests.test_socion.Socion.test_reverse_scheduler_still_has_independent_successful_goals) ... ok
+test_silent_and_unavailable_partner_produce_timeout_and_own_checking (tests.test_socion.Socion.test_silent_and_unavailable_partner_produce_timeout_and_own_checking) ... ok
+test_stale_report_cannot_replace_later_direct_knowledge (tests.test_socion.Socion.test_stale_report_cannot_replace_later_direct_knowledge) ... ok
+test_tampered_policy_result_rejects_even_when_rehashed (tests.test_socion.Socion.test_tampered_policy_result_rejects_even_when_rehashed) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 13.403s
+
+OK
