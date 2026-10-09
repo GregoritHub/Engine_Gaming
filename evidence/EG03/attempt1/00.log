@@ -1,0 +1,129 @@
+test_aliases_are_identity_not_label (tests.test_fol.Semantics.test_aliases_are_identity_not_label) ... ok
+test_all_tiny_unary_interpretations (tests.test_fol.Semantics.test_all_tiny_unary_interpretations) ... ok
+test_atomic_stale_and_historical_queries (tests.test_fol.Semantics.test_atomic_stale_and_historical_queries) ... ok
+test_independent_truth_sets_scope_and_connectives (tests.test_fol.Semantics.test_independent_truth_sets_scope_and_connectives) ... ok
+test_invariants (tests.test_fol.Semantics.test_invariants) ... ok
+test_malformed_and_hidden_branches_reject (tests.test_fol.Semantics.test_malformed_and_hidden_branches_reject) ... ok
+test_native_adapter_and_hidden_view (tests.test_fol.Semantics.test_native_adapter_and_hidden_view) ... ok
+test_open_assignment_and_budget (tests.test_fol.Semantics.test_open_assignment_and_budget) ... ok
+test_save_revalidate_and_immutable (tests.test_fol.Semantics.test_save_revalidate_and_immutable) ... ok
+test_text_board_label_camera_equivalence (tests.test_fol.Semantics.test_text_board_label_camera_equivalence) ... ok
+test_asymmetric_edge_and_unavailable (tests.test_field.Connections.test_asymmetric_edge_and_unavailable) ... ERROR
+test_delivery_not_read_and_duplicate (tests.test_field.Connections.test_delivery_not_read_and_duplicate) ... ERROR
+test_partial_processing_and_restore (tests.test_field.Connections.test_partial_processing_and_restore) ... ERROR
+test_processed_delivery_changes_material_outcome (tests.test_field.Connections.test_processed_delivery_changes_material_outcome) ... ERROR
+test_three_agents_and_fair_turns (tests.test_field.Connections.test_three_agents_and_fair_turns) ... ERROR
+test_undelivered_hidden_change_not_policy_input (tests.test_field.Connections.test_undelivered_hidden_change_not_policy_input) ... ERROR
+
+======================================================================
+ERROR: test_asymmetric_edge_and_unavailable (tests.test_field.Connections.test_asymmetric_edge_and_unavailable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_field.py", line 39, in test_asymmetric_edge_and_unavailable
+    f=self.make(edges={(ACTORS[0],ACTORS[1])});f.active.remove(ACTORS[1]);f.run(150)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_field.py", line 11, in make
+    e,a,t,i=setup(n,stocks=(12,8,4)[:n]);return Field(e,a,t,i,edges,quantum)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/engine_gaming/scenario.py", line 70, in setup
+    ObjectVersion(TOPIC,WRITER,'Shared allocation task',(Role.CONCEPT,)),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 13, in __init__
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/vendor/socionics/hle_unified/records.py", line 342, in __post_init__
+    raise ValueError(f"missing state for {role.value}")
+ValueError: missing state for concept
+
+======================================================================
+ERROR: test_delivery_not_read_and_duplicate (tests.test_field.Connections.test_delivery_not_read_and_duplicate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_field.py", line 30, in test_delivery_not_read_and_duplicate
+    f=self.make(quantum=1)
+      ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_field.py", line 11, in make
+    e,a,t,i=setup(n,stocks=(12,8,4)[:n]);return Field(e,a,t,i,edges,quantum)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/engine_gaming/scenario.py", line 70, in setup
+    ObjectVersion(TOPIC,WRITER,'Shared allocation task',(Role.CONCEPT,)),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 13, in __init__
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/vendor/socionics/hle_unified/records.py", line 342, in __post_init__
+    raise ValueError(f"missing state for {role.value}")
+ValueError: missing state for concept
+
+======================================================================
+ERROR: test_partial_processing_and_restore (tests.test_field.Connections.test_partial_processing_and_restore)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_field.py", line 42, in test_partial_processing_and_restore
+    f=self.make(quantum=1).run(90);saved=f.checkpoint();restored=Field.restore(saved)
+      ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_field.py", line 11, in make
+    e,a,t,i=setup(n,stocks=(12,8,4)[:n]);return Field(e,a,t,i,edges,quantum)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/engine_gaming/scenario.py", line 70, in setup
+    ObjectVersion(TOPIC,WRITER,'Shared allocation task',(Role.CONCEPT,)),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 13, in __init__
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/vendor/socionics/hle_unified/records.py", line 342, in __post_init__
+    raise ValueError(f"missing state for {role.value}")
+ValueError: missing state for concept
+
+======================================================================
+ERROR: test_processed_delivery_changes_material_outcome (tests.test_field.Connections.test_processed_delivery_changes_material_outcome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_field.py", line 13, in test_processed_delivery_changes_material_outcome
+    f=self.make().run(200);self.assertFalse(f.rejections,f.rejections)
+      ^^^^^^^^^^^
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_field.py", line 11, in make
+    e,a,t,i=setup(n,stocks=(12,8,4)[:n]);return Field(e,a,t,i,edges,quantum)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/engine_gaming/scenario.py", line 70, in setup
+    ObjectVersion(TOPIC,WRITER,'Shared allocation task',(Role.CONCEPT,)),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 13, in __init__
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/vendor/socionics/hle_unified/records.py", line 342, in __post_init__
+    raise ValueError(f"missing state for {role.value}")
+ValueError: missing state for concept
+
+======================================================================
+ERROR: test_three_agents_and_fair_turns (tests.test_field.Connections.test_three_agents_and_fair_turns)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_field.py", line 20, in test_three_agents_and_fair_turns
+    f=self.make(3).run(450);self.assertFalse(f.rejections,f.rejections)
+      ^^^^^^^^^^^^
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_field.py", line 11, in make
+    e,a,t,i=setup(n,stocks=(12,8,4)[:n]);return Field(e,a,t,i,edges,quantum)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/engine_gaming/scenario.py", line 70, in setup
+    ObjectVersion(TOPIC,WRITER,'Shared allocation task',(Role.CONCEPT,)),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 13, in __init__
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/vendor/socionics/hle_unified/records.py", line 342, in __post_init__
+    raise ValueError(f"missing state for {role.value}")
+ValueError: missing state for concept
+
+======================================================================
+ERROR: test_undelivered_hidden_change_not_policy_input (tests.test_field.Connections.test_undelivered_hidden_change_not_policy_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_field.py", line 26, in test_undelivered_hidden_change_not_policy_input
+    f=self.make();b=f.actors[1];before=proposal(f.engine.participant_view(b),f.own[b])
+      ^^^^^^^^^^^
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_field.py", line 11, in make
+    e,a,t,i=setup(n,stocks=(12,8,4)[:n]);return Field(e,a,t,i,edges,quantum)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/engine_gaming/scenario.py", line 70, in setup
+    ObjectVersion(TOPIC,WRITER,'Shared allocation task',(Role.CONCEPT,)),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 13, in __init__
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/vendor/socionics/hle_unified/records.py", line 342, in __post_init__
+    raise ValueError(f"missing state for {role.value}")
+ValueError: missing state for concept
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.025s
+
+FAILED (errors=6)

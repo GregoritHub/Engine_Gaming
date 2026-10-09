@@ -1,0 +1,31 @@
+test_aliases_are_identity_not_label (tests.test_fol.Semantics.test_aliases_are_identity_not_label) ... ok
+test_all_tiny_unary_interpretations (tests.test_fol.Semantics.test_all_tiny_unary_interpretations) ... ok
+test_atomic_stale_and_historical_queries (tests.test_fol.Semantics.test_atomic_stale_and_historical_queries) ... ok
+test_independent_truth_sets_scope_and_connectives (tests.test_fol.Semantics.test_independent_truth_sets_scope_and_connectives) ... ok
+test_invariants (tests.test_fol.Semantics.test_invariants) ... ok
+test_malformed_and_hidden_branches_reject (tests.test_fol.Semantics.test_malformed_and_hidden_branches_reject) ... ok
+test_native_adapter_and_hidden_view (tests.test_fol.Semantics.test_native_adapter_and_hidden_view) ... ok
+test_open_assignment_and_budget (tests.test_fol.Semantics.test_open_assignment_and_budget) ... ok
+test_save_revalidate_and_immutable (tests.test_fol.Semantics.test_save_revalidate_and_immutable) ... ok
+test_text_board_label_camera_equivalence (tests.test_fol.Semantics.test_text_board_label_camera_equivalence) ... ok
+test_asymmetric_edge_and_unavailable (tests.test_field.Connections.test_asymmetric_edge_and_unavailable) ... ok
+test_delivery_not_read_and_duplicate (tests.test_field.Connections.test_delivery_not_read_and_duplicate) ... ok
+test_forged_processing_rejected (tests.test_field.Connections.test_forged_processing_rejected) ... ok
+test_indirect_shared_object_subscription (tests.test_field.Connections.test_indirect_shared_object_subscription) ... ok
+test_partial_processing_and_restore (tests.test_field.Connections.test_partial_processing_and_restore) ... ok
+test_processed_delivery_changes_material_outcome (tests.test_field.Connections.test_processed_delivery_changes_material_outcome) ... ok
+test_three_agents_and_fair_turns (tests.test_field.Connections.test_three_agents_and_fair_turns) ... ok
+test_undelivered_hidden_change_not_policy_input (tests.test_field.Connections.test_undelivered_hidden_change_not_policy_input) ... FAIL
+
+======================================================================
+FAIL: test_undelivered_hidden_change_not_policy_input (tests.test_field.Connections.test_undelivered_hidden_change_not_policy_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_field.py", line 28, in test_undelivered_hidden_change_not_policy_input
+    self.assertEqual(proposal(f.engine.participant_view(b),f.own[b]),before)
+AssertionError: {'action': 'apply', 'source': ObjectRef(i[121 chars]n=1)} != None
+
+----------------------------------------------------------------------
+Ran 18 tests in 32.482s
+
+FAILED (failures=1)
