@@ -11,6 +11,9 @@ from hle_unified.crux_shell_execution import CruxShellEngine
 from .scenario import ROOM,CUE,TOPIC,ref,selectors,intention
 from .field_policy import proposal
 from .world_adapter import from_store
+from .shell_adapter import evidence as shell_evidence
+from hle_unified.crux_shell_records import ShellMovementRequest
+from hle_unified.operations import address
 
 
 class Field:
@@ -76,11 +79,20 @@ class Field:
     def _start_choice(self,actor,choice):
         request=self._request(actor,choice)
         pending={'key':request.key,'kind':choice['action'],'source':choice.get('source')}
+        if self.shell_phase and choice['action'] in ('theorize','apply','embody'):
+            gate=self.key(actor,'admission')
+            request=ShellMovementRequest(gate,request,ObjectRef(actor,1),ObjectRef(actor,1),shell_evidence(self.engine,actor),phase=self.shell_phase)
+            pending=dict(key=gate,kind='admission',child=pending)
         self.engine.start('start:'+request.key,request)
         self.pending[actor]=pending
         self.events.append(dict(kind='choice',turn=self.turn,actor=actor,action=choice['action'],key=request.key,source=choice.get('source')))
     def _finish(self,actor,pending,d):
         own=self.own[actor];kind=pending['kind']
+        if kind=='admission' and d['status']=='succeeded':
+            receipt=attrs(self.engine.world.resolve(address('c5.admission',actor,pending['key'])))
+            self.events.append(dict(kind='admission',turn=self.turn,actor=actor,key=pending['key'],admitted=receipt['admitted'],child=receipt['child']))
+            if receipt['child'] is not None:return pending['child']
+            own['phase']='stopped';return
         if d['status']!='succeeded':
             own['phase']='stopped';self.events.append(dict(kind='stopped',actor=actor,turn=self.turn,key=pending['key'],reason=d.get('failure') or d['status']));return
         if kind=='read':
@@ -110,7 +122,7 @@ class Field:
             if p:
                 d=self.engine.job_status(actor,p['key'])
                 if d['status'] in ('succeeded','failed','cancelled'):
-                    self._finish(actor,p,d);self.pending[actor]=None;action='finish'
+                    self.pending[actor]=self._finish(actor,p,d);action='finish'
                 elif d['status']=='ready':
                     self.engine.commit('commit:'+p['key'],actor,p['key']);action='commit'
                 elif min(self.engine.wallet(actor)[k] for k in ('energy','time'))==0:action='exhausted'

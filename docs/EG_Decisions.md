@@ -5,3 +5,9 @@ The direct authenticated Git transport is unavailable. The supported connector c
 
 ## EG-D02 Isolated game extension
 New runtime contracts and code go in engine_gaming, outside the pinned source. Maintenance scenario rules remain in explicit adapters. Research audits and test fixtures are reproduction tools, not the ordinary gameplay runtime.
+
+## Workshop slice and release scope
+
+The first playable scenario is a finite shared-allocation workshop. Players inhabit Alice with the same paid access/action boundary as an agent. Ownership and material consumption carry the immediate consequences; repairs, borrowing, broader institutions and commercial art are next-work candidates. Text is the primary interface, with a second compact board view of the same permitted information and a separate explicit truth inspector. This keeps foundational causal inspection available without giving the ordinary player hidden facts.
+
+The field uses direct C3 movements through C5 admission, not timed maintenance workflow operations. It preserves those native schemas and their costs. No artificial old-social reception fee, universal estafette clock, replenishment or new energy law is introduced. Population experiments will be bounded finite sessions; idle turns will be measured separately from useful work. Reusable development capacity must come from native observed independent practice, never from merely labelling a correction successful.
