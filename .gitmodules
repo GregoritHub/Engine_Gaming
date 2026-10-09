@@ -1,0 +1,3 @@
+[submodule "vendor/socionics"]
+	path = vendor/socionics
+	url = https://github.com/GregoritHub/Socionics_Engine.git
