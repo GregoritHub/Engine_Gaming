@@ -1,0 +1,16 @@
+{
+  "schema": "eg-remote-delivery-v1",
+  "repository": "GregoritHub/Engine_Gaming",
+  "release": "0.1",
+  "verified_release_commit": "239b5bb602d410dacf30fdae4ff2e487dd27b3b4",
+  "verified_tree": "cb8bb597acba71e0c5450797b81ceb8cdd09cf81",
+  "saved_files_verified_by_git_blob_sha": 249,
+  "source_submodule_commit": "ab674a36e9234dcbf46634367bfc2b42b8b3cd18",
+  "branches_confirmed": {
+    "main": "239b5bb602d410dacf30fdae4ff2e487dd27b3b4",
+    "engine-gaming": "239b5bb602d410dacf30fdae4ff2e487dd27b3b4"
+  },
+  "verified_at": "2026-10-09T09:33:45.002Z",
+  "method": "Read back recursive GitHub tree, compare every saved file blob SHA, check source gitlink, fast-forward main with expected prior head, then read both branch heads.",
+  "note": "This receipt is committed after verification; its metadata commit leaves all tested program bytes unchanged."
+}

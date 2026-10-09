@@ -1,7 +1,7 @@
 {
   "schema": "engine-gaming-run-v1",
   "plan_version": "1.0",
-  "status": "verified_awaiting_remote_save",
+  "status": "completed",
   "current_batch": "EG08",
   "completed_batches": [
     "EG01",
@@ -16,13 +16,15 @@
   "source_commit": "ab674a36e9234dcbf46634367bfc2b42b8b3cd18",
   "source_tree": "294edf4170efa127814b99a999ecd52702b9a563",
   "run_id": "eg-20261009-0804",
-  "lease_expires_at": "2026-10-09T09:54:43.029260+00:00",
-  "next_step": "Save final release and verify both GitHub branches",
+  "lease_expires_at": null,
+  "next_step": null,
   "blocker": null,
   "acceptance_evidence": [
     "docs/EG08_Record.md",
     "docs/EG_Release_Decision.json",
     "evidence/EG08/attempt2/result.json"
   ],
-  "last_verified_commit": "9b4449d3afb6cb006c568904c14583c1bb86a646"
+  "last_verified_commit": "239b5bb602d410dacf30fdae4ff2e487dd27b3b4",
+  "completed_at": "2026-10-09T09:33:45.371184+00:00",
+  "remote_delivery": "docs/EG_Remote_Delivery.json"
 }

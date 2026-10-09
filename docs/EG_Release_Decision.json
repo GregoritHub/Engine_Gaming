@@ -24,6 +24,7 @@
     "evidence/EG08/attempt2/02.log"
   ],
   "verified_at": "2026-10-09T09:30:21.910885+00:00",
-  "remote_delivery": "pending final save and branch verification",
-  "limits": "Finite workshop; measured populations2\u20134; no human playtest or unbounded-play claim"
+  "remote_delivery": "verified: docs/EG_Remote_Delivery.json",
+  "limits": "Finite workshop; measured populations2\u20134; no human playtest or unbounded-play claim",
+  "verified_release_commit": "239b5bb602d410dacf30fdae4ff2e487dd27b3b4"
 }

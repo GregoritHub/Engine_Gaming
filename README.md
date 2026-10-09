@@ -2,7 +2,7 @@
 
 A finite, playable agent workshop built on the pinned Socionics Engine. Agents pay to read, interpret and act. Generated proposals circulate through distinct types; retained Shell patterns can prevent work, interrupt it, or change under supported correction. The world also exposes a presentation-independent finite first-order interpretation.
 
-**Release 0.1 accepted: EG01–EG08 complete.** The verified scope is a finite workshop with measured two-, three-, and four-agent sessions. See `docs/EG08_Record.md` for the142-method acceptance evidence and performance results.
+**Release 0.1 accepted: EG01–EG08 complete.** The verified scope is a finite workshop with measured two-, three-, and four-agent sessions. See `docs/EG08_Record.md` for the 142-method acceptance evidence and performance results.
 
 ## Start
 
