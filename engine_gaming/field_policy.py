@@ -14,7 +14,17 @@ def proposal(view,own):
             except (ValueError,TypeError):continue
             if d.get('kind')=='model' and d.get('target')==TOPIC and d.get('context')==ROOM:
                 models.append(p.source)
-        if models:return {'action':'apply','source':min(models)}
+        if models:
+            demand=5
+            if own.get('limit_by_stock'):
+                rows={}
+                for p in view.lookup():
+                    if p.source.identity.namespace=='eg.workshop' and p.source.identity.key==view.snapshot.actor.key+'-stock':rows.setdefault(p.source,{})[p.address.key]=p.value
+                if rows:
+                    row=rows[max(rows)]
+                    if type(row.get('quantity')) is int and type(row.get('consumed')) is int:demand=min(5,row['quantity']-row['consumed'])
+                if demand<=0:return None
+            return {'action':'apply','source':min(models),'demand':demand}
     if phase in ('inspect','inspect_shared'):return {'action':phase}
     if phase=='embody':return {'action':'embody','source':own['observation']}
     if phase=='reframe':

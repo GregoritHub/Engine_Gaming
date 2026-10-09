@@ -1,0 +1,32 @@
+test_initial_intention_changes_generated_consequence (tests.test_play.Play.test_initial_intention_changes_generated_consequence) ... FAIL
+test_invalid_and_competing_player_actions_refuse (tests.test_play.Play.test_invalid_and_competing_player_actions_refuse) ... ok
+test_playable_path_views_and_further_informed_choice (tests.test_play.Play.test_playable_path_views_and_further_informed_choice) ... FAIL
+test_save_load_and_privileged_commands_not_in_play (tests.test_play.Play.test_save_load_and_privileged_commands_not_in_play) ... ok
+
+======================================================================
+FAIL: test_initial_intention_changes_generated_consequence (tests.test_play.Play.test_initial_intention_changes_generated_consequence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_play.py", line 38, in test_initial_intention_changes_generated_consequence
+    self.assertEqual([m['cap'] for m in player_snapshot(s)['models']],[2])
+AssertionError: Lists differ: [1] != [2]
+
+First differing element 0:
+1
+2
+
+- [1]
++ [2]
+
+======================================================================
+FAIL: test_playable_path_views_and_further_informed_choice (tests.test_play.Play.test_playable_path_views_and_further_informed_choice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e2b89b674c7d/Engine_Gaming/tests/test_play.py", line 14, in test_playable_path_views_and_further_informed_choice
+    self.assertNotIn('Could not finish',out)
+AssertionError: 'Could not finish' unexpectedly found in 'Could not finish: finish or cancel current work first\nAlice · turn 606\nLast known supplies: 12 (revision 1). Work budget: 3742.\nAllocation returned. Completed returns: 1.\nReceived allocation limits: 1. Other inventories are unknown.'
+
+----------------------------------------------------------------------
+Ran 4 tests in 35.227s
+
+FAILED (failures=2)

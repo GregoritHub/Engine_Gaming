@@ -17,15 +17,16 @@ from hle_unified.operations import address
 
 
 class Field:
-    SCHEMA='eg-agent-field-v1'
+    SCHEMA='eg-agent-field-v2'
     def __init__(self,engine,actors,types,initial,edges=None,quantum=17):
         if len(set(actors))!=len(actors) or len(actors)!=len(types) or len(actors)<2:raise ValueError('distinct typed population')
         if type(quantum) is not int or quantum<1:raise ValueError('positive integer quantum')
+        self.refresh_inspections=True;self.legacy=False
         self.engine=engine;self.actors=tuple(actors);self.types=dict(zip(actors,types));self.quantum=quantum
         self.edges=set(zip(actors,(*actors[1:],actors[0]))) if edges is None else set(edges)
         if any(a not in actors or b not in actors or a==b for a,b in self.edges):raise ValueError('valid directed edges required')
         self.turn=0;self.serial=0;self.events=[];self.sent=set();self.queues={a:[] for a in actors};self.pending={a:None for a in actors}
-        self.own={a:dict(phase='initial' if i==0 else 'await',initial=initial if i==0 else None,used=(),observation=None,retained=None,intention=None,cycles=0,forward=i!=0) for i,a in enumerate(actors)}
+        self.own={a:dict(limit_by_stock=True,phase='initial' if i==0 else 'await',initial=initial if i==0 else None,used=(),observation=None,retained=None,intention=None,cycles=0,forward=i!=0) for i,a in enumerate(actors)}
         self.active=set(actors);self.rejections=[];self.observations=set();self.shell_phase=None
     def key(self,actor,kind):
         self.serial+=1;return 'eg:'+actor.key+':'+kind+':'+str(self.serial)
@@ -75,7 +76,7 @@ class Field:
             out,r=intention(self.engine,actor,key,choice['cap'],choice['source']);self.own[actor]['intention']=out;return r
         recipes={'theorize':'theorize-expenditure-v1','apply':'apply-expenditure-v1','embody':'embody-expenditure-v1'}
         return CrossingRequest(key,actor,recipes[action],ROOM,CUE,(choice['source'],),self._evidence(actor),TOPIC,
-            stock=self._known_stock(actor) if action=='apply' else None,peer=self._peer(actor) if action=='theorize' else None,demand=5)
+            stock=self._known_stock(actor) if action=='apply' else None,peer=self._peer(actor) if action=='theorize' else None,demand=choice.get('demand',5))
     def _start_choice(self,actor,choice):
         request=self._request(actor,choice)
         pending={'key':request.key,'kind':choice['action'],'source':choice.get('source')}
@@ -110,6 +111,10 @@ class Field:
             key=self.key(actor,'self-observation');obs=self.engine.deliver_event(key,d['result'],actor)
             self.queues[actor].append(dict(key=key,source=obs,sender=actor,kind='observation',after='embody'))
             own['observation']=obs;own['phase']='reading_observation'
+            if self.refresh_inspections:
+                target=attrs(self.engine.world.resolve(d['result']))['target'];fresh=self.key(actor,'observed-stock')
+                self.engine.disclose(fresh,actor,target,selectors(self.engine.world.resolve(target)),target)
+                self.queues[actor].append(dict(key=fresh,source=target,sender=actor,kind='material_refresh'))
         elif kind=='embody':own['retained']=d['binding'];own['phase']='reframe'
         elif kind=='reframe':own['phase']='forward'
     def step(self):
@@ -147,15 +152,18 @@ class Field:
         for _ in range(turns):self.step()
         return self
     def data(self):
-        return dict(schema=self.SCHEMA,engine=self.engine.checkpoint(),actors=self.actors,types=tuple(self.types[a] for a in self.actors),quantum=self.quantum,
+        return dict(schema='eg-agent-field-v1' if self.legacy else self.SCHEMA,**({} if self.legacy else {'refresh_inspections':self.refresh_inspections}),engine=self.engine.checkpoint(),actors=self.actors,types=tuple(self.types[a] for a in self.actors),quantum=self.quantum,
             edges=tuple(sorted(self.edges)),turn=self.turn,serial=self.serial,events=tuple(self.events),sent=tuple(sorted(self.sent)),queues=tuple(self.queues.items()),pending=tuple(self.pending.items()),own=tuple(self.own.items()),active=tuple(sorted(self.active)),rejections=tuple(self.rejections),observations=tuple(sorted(self.observations)),shell_phase=self.shell_phase)
     def checkpoint(self):return dumps(self.data())
     @classmethod
     def restore(cls,text):
         d=loads(text)
         expected={'schema','engine','actors','types','quantum','edges','turn','serial','events','sent','queues','pending','own','active','rejections','observations','shell_phase'}
-        if set(d)!=expected or d['schema']!=cls.SCHEMA:raise ValueError('unknown field schema')
+        if d.get('schema')==cls.SCHEMA:expected.add('refresh_inspections')
+        if set(d)!=expected or d['schema'] not in (cls.SCHEMA,'eg-agent-field-v1'):raise ValueError('unknown field schema')
         e=CruxShellEngine.restore(d['engine']);obj=cls(e,d['actors'],d['types'],None,d['edges'],d['quantum'])
+        obj.legacy=d['schema']=='eg-agent-field-v1';obj.refresh_inspections=d.get('refresh_inspections',False)
+        if type(obj.refresh_inspections) is not bool:raise ValueError('invalid observation boundary')
         for k in ('turn','serial','shell_phase'):setattr(obj,k,d[k])
         for k in ('queues','pending','own'):setattr(obj,k,dict(d[k]))
         obj.events=list(d['events']);obj.sent=set(d['sent']);obj.active=set(d['active']);obj.rejections=list(d['rejections']);obj.observations=set(d['observations'])

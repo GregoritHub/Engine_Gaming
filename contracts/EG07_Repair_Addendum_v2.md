@@ -1,0 +1,5 @@
+# EG07 candidate2 prospective clarification
+
+Following preserved candidate1 findings, player proposals are integers1–5, reflecting the authored demand ceiling. Use cap4 versus cap5 as the meaningful-choice control. A successful native inspection may disclose only the exact material revision in its own observed result, then pay native reading before it becomes known stock. Agent inspection retains its separate paid observation for Embody and pays the material refresh separately. Player inspection directly reads that inspected material projection. Twelve global turns suffice for the one queued player read with quantum17; ordinary UI exposes pending work if still incomplete.
+
+Field v2 records refresh_inspections. Legacy field v1 has observation-only behavior. Session v3 replays the new boundary; session v2 replays legacy behavior. New continuation must consume Bryn's remaining3 units, retain Alice's generated earlier experience, then stop legitimately on a zero-material-command downstream. Verify old saved bytes through the actual EG06 session fixture and new exact saves. Never rewrite old evidence.

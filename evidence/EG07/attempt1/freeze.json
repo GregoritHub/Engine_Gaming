@@ -1,0 +1,49 @@
+{
+  "source_commit": "ab674a36e9234dcbf46634367bfc2b42b8b3cd18",
+  "files": {
+    "contracts/EG01_Protocol_v1.json": "d5bd1abfb3765a6e5e50b8bf6d78749848ed78967f7b147fe51a81ccc088ac38",
+    "contracts/EG02_FOL_Contract_v1.md": "d5963316ec592e48358c076e053cb8117eaa3913511303e940a65c34bb800943",
+    "contracts/EG03_Field_Contract_v1.md": "750259407e7f11dc88a94bc50c362608d123785f3bff4d9540d2b20396bf6f98",
+    "contracts/EG04_Shell_Contract_v1.md": "85c2a1edeeff22e3f6c2642ffe02cb3b5cac2f6dbc6aa657dbc30ff1b95ca855",
+    "contracts/EG04_Shell_Contract_v1.sha256": "ca4abb954e1ca63140683990e8e8bea8a7c6434c5ae6d1ad370e4e280c9cf60e",
+    "contracts/EG05_Loop_Contract_v1.md": "8812e22457ceb3d2683af7c1ab593df5dd4c7ed338a424de7efbafd73209f94d",
+    "contracts/EG05_Loop_Contract_v1.sha256": "892ba19eabcaf057b6f634367ccf5bcf2f81bea6e51486e4ce4bda416b0669d1",
+    "contracts/EG06_Continuation_Contract_v2.md": "0c2fa8839f1df9e160763508360e728fb115c3990ff6fd3cfa2824c03cf7163d",
+    "contracts/EG06_Continuation_Contract_v2.sha256": "d4788771043656f7e810eac4538bd0de8a79a5b1dc2645eddb15a9cd2cf181d5",
+    "contracts/EG07_Play_Contract_v1.md": "44f6db7970c76ec7dc96c10cddedcd9d8389d239be039ac7d6fc8364c00c665a",
+    "contracts/EG07_Play_Contract_v1.sha256": "4074a5400fbc88e5b82eaa82ba3fb2ad5971f23239aa3e765f899334b7cb85b7",
+    "contracts/EG_Contract_Manifest.json": "a25db1dc92b0d30818e7b9ac42837c5e893d339ae60f39f09c14edcf51baefeb",
+    "engine_gaming/__init__.py": "38dddcdeb60d6368293d4b2c890517d7dd251b86b242a92253223647478f686e",
+    "engine_gaming/__main__.py": "ac671806ab60d20cef1b051c878a3e0cba987ccc854d2188cbc2b90032e08996",
+    "engine_gaming/development_adapter.py": "24b66bf470d6f2749acb80ab6c5a9d074ed0b92e3b845c3b6a24f801a0646ced",
+    "engine_gaming/field.py": "22b1b98dad2df12dafe4c3594ed76e70855b2ac1e14ca7e6bf6a31aa37ef43cf",
+    "engine_gaming/field_audit.py": "97f7c48d75e0c37694c2d508e0ed6243fe03d6917968d3b441b051a28681f189",
+    "engine_gaming/field_policy.py": "fcf96cc59615cd8084e69a2bc9f35ce86a78b7b7e9d9eed93a0aeb5fea80cf2e",
+    "engine_gaming/fol.py": "35e01200642818b5146a2003a933ac7b7a0d7d131bfbddde7835ec17aece222c",
+    "engine_gaming/fol_reference.py": "8fed5af91819f2ec9e64e832fbf952b0cd9efc67bcbbda62e096dee480722380",
+    "engine_gaming/loop_audit.py": "739ffd138a2ec96351bcaa5110016ae6d8d40b62988371dc7c0959977d9542bb",
+    "engine_gaming/play.py": "296a98231621840ce02da1213d02845b0cbe484b692ba716b9ae80c17d8e8177",
+    "engine_gaming/scenario.py": "2562b48abba9e7afb42ab1008b3c0412382adac4aea678c5d138d4c4589186ae",
+    "engine_gaming/session.py": "2445521acf94e0a522f6d1b496fd0073420b2f20029d92eae56cd4df3f051be4",
+    "engine_gaming/shell_adapter.py": "e97eebe8a08d6b147c5f15f9e01dc143f54edff616f7d9ea94b81f8fad2afde9",
+    "engine_gaming/world_adapter.py": "903237b5e019614599b61d9eb24bed97cb15071badca1e92d0d3e9aa48084157",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_continuation.py": "5a1d0494c8af83b2b9e541b267e0f149d4f065d17c87866b0891a6a5c76db9b5",
+    "tests/test_field.py": "f8f700690c8b841778867fcd20330ec1d4934eaa3ec7e6a25588419ef3f1f4fe",
+    "tests/test_fol.py": "92fff4e2d4a100cbb1ac7b513504714cba52380d690176698040f413953a5e91",
+    "tests/test_loop.py": "1b02d2955082816729f6012168e0a5e3559c8442651da59f38d843aedf375477",
+    "tests/test_play.py": "b9efc60ad18cdadc765101e0aee2e41847aebd2386171c16c23f04505c25996a",
+    "tests/test_shell.py": "b2d2164b996ff3a28cbc839631b266173291eccddff7f8ebd207e240720d69a6",
+    "tools/verify_batch.py": "904ff06b120b6857af699bcdecd6d2ddede4f7913a6ab8c603b0f1a2574d46d2"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "commands": [
+    [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "-v",
+      "tests.test_play"
+    ]
+  ]
+}

@@ -35,6 +35,8 @@ class Persistence(unittest.TestCase):
         self.assertTrue(s.act(dict(id='renew',kind='renew'))['ok'])
         s.act(dict(id='two',kind='advance',turns=600))
         self.assertTrue(s.field.own[a]['retained'])
+        self.assertEqual(attrs(s.field.engine.world.head(ref('bryn-stock').identity))['consumed'],8)
+        self.assertFalse(any(x.get('reason')=='stale_dependency' for x in s.field.events))
         self.assertTrue(any(x['kind']=='choice' and x['actor']==a and x['action']=='reframe' for x in s.field.events))
         audit(s.field.engine.world.journal(),s.field.engine.access.checkpoint())
         root=pathlib.Path('evidence/EG06')/('continuation-'+str(time.time_ns()));root.mkdir()
@@ -62,3 +64,7 @@ class Persistence(unittest.TestCase):
         self.assertEqual(attrs(restored.engine.world.resolve(d['encounter']))['route'],'wait')
         root=pathlib.Path('evidence/EG06')/('capacity-'+str(time.time_ns()));root.mkdir()
         (root/'trained.json.gz').write_bytes(gzip.compress(f.checkpoint().encode(),mtime=0));(root/'audit.json').write_text(dumps(report))
+
+    def test_legacy_session_bytes_preserved(self):
+        p=pathlib.Path('evidence/EG06/continuation-1791535591645734592/session.json.gz')
+        text=gzip.decompress(p.read_bytes()).decode();self.assertEqual(Session.restore(text).checkpoint(),text)

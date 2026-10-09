@@ -1,15 +1,18 @@
 """Bounded user commands and replay-verified user saves."""
 import json
-from .scenario import setup,ref,ROOM,intention,perform
+from .scenario import setup,ref,ROOM,intention,perform,selectors
 from .field import Field
 from .shell_adapter import generated,enable,release
 from .fol import unique_pairs
+from hle_unified.material import attrs
 from hle_unified.operation_records import OperationRequest
 
 DEFAULT=dict(population=3,budget=4000,stocks=[12,8,4],initial_cap=5,quantum=17,shell='blocked',shell_actor=0)
 class Session:
-    SCHEMA='eg-session-v2'
-    def __init__(self,config=None):
+    SCHEMA='eg-session-v3'
+    def __init__(self,config=None,version=None):
+        self.version=version or self.SCHEMA
+        if self.version not in (self.SCHEMA,'eg-session-v2'):raise ValueError('unknown session version')
         c=dict(DEFAULT if config is None else config)
         if set(c)!=set(DEFAULT) or c['shell'] not in ('none','blocked','corrected'):raise ValueError('exact session configuration required')
         if type(c['shell_actor']) is not int or not 0<=c['shell_actor']<c['population']:raise ValueError('valid Shell actor index required')
@@ -17,6 +20,9 @@ class Session:
         if type(c['quantum']) is not int or not 1<=c['quantum']<=1000:raise ValueError('bounded work quantum')
         self.config=c;self.field=Field(*setup(c['population'],c['budget'],tuple(c['stocks']),c['initial_cap']),quantum=c['quantum'])
         f=self.field
+        if self.version=='eg-session-v2':
+            f.legacy=True;f.refresh_inspections=False
+            for own in f.own.values():own.pop('limit_by_stock',None)
         if c['shell']!='none':
             a=f.actors[c['shell_actor']];p=generated(f.engine,a)
         enable(f)
@@ -37,7 +43,7 @@ class Session:
             if type(n) is not int or not 0<=n<=1000 or f.turn+n>10000:raise ValueError('bounded finite turns required')
         if kind in ('consume','propose'):
             n=command['amount' if kind=='consume' else 'cap']
-            if type(n) is not int or not 1<=n<=1000:raise ValueError('positive bounded exact quantity')
+            if type(n) is not int or not 1<=n<=(5 if kind=='propose' and self.version==self.SCHEMA else 1000):raise ValueError('proposal limit is 1–5; consumption quantity is 1–1000')
         try:
             if kind=='advance':f.run(command['turns'])
             elif kind=='cancel':
@@ -71,23 +77,28 @@ class Session:
                     r=OperationRequest(key,a,kind,ROOM,evidence=ev,**({'target':target} if kind=='inspect' else {'stock':target,'amount':command['amount']}))
                     d=perform(e,r)
                     if kind=='inspect' and d['status']=='succeeded':
-                        obs=e.deliver_event(key+':observed',d['result'],a)
-                        f.queues[a].append(dict(key=key+':observed',source=obs,sender=a,kind='observation'))
+                        if self.version=='eg-session-v2':
+                            obs=e.deliver_event(key+':observed',d['result'],a)
+                            f.queues[a].append(dict(key=key+':observed',source=obs,sender=a,kind='observation'))
+                        else:
+                            observed=attrs(e.world.resolve(d['result']))['target']
+                            e.disclose(key+':observed',a,observed,selectors(e.world.resolve(observed)),observed)
+                            f.queues[a].append(dict(key=key+':observed',source=observed,sender=a,kind='material_refresh'))
                     if d['status'] not in ('succeeded','failed','cancelled'):f.pending[a]=dict(key=key,kind='player',source=None)
                     if d['status']=='failed':raise ValueError(d['failure'])
             result=dict(ok=True,turn=f.turn)
         except ValueError as exc:result=dict(ok=False,error=str(exc),turn=f.turn)
         self.commands.append(dict(command));self.results.append(result);return result
     def checkpoint(self):
-        return json.dumps(dict(schema=self.SCHEMA,config=self.config,commands=self.commands,results=self.results,state=self.field.checkpoint()),sort_keys=True,separators=(',',':'))
+        return json.dumps(dict(schema=self.version,config=self.config,commands=self.commands,results=self.results,state=self.field.checkpoint()),sort_keys=True,separators=(',',':'))
     @classmethod
     def restore(cls,text):
         if type(text) is not str or len(text)>32_000_000:raise ValueError('save exceeds 32 MB bound')
         try:
             d=json.loads(text,object_pairs_hook=unique_pairs)
-            if type(d) is not dict or set(d)!={'schema','config','commands','results','state'} or d['schema']!=cls.SCHEMA:raise ValueError('unsupported session schema; use Field.restore for trusted v1 research evidence')
+            if type(d) is not dict or set(d)!={'schema','config','commands','results','state'} or d['schema'] not in (cls.SCHEMA,'eg-session-v2'):raise ValueError('unsupported session schema; use Field.restore for trusted v1 research evidence')
             if type(d['commands']) is not list or len(d['commands'])>2048:raise ValueError('invalid command sequence')
-            s=cls(d['config'])
+            s=cls(d['config'],d['schema'])
             for c in d['commands']:s.act(c)
             if s.checkpoint()!=json.dumps(d,sort_keys=True,separators=(',',':')):raise ValueError('save differs from deterministic paid replay')
             return s

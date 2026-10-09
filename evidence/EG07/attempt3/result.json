@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "source_unchanged": true,
+  "results": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "-v",
+        "tests.test_play",
+        "tests.test_continuation.Persistence.test_new_episode_reuses_generated_experience",
+        "tests.test_continuation.Persistence.test_legacy_session_bytes_preserved",
+        "tests.test_field.Connections.test_three_agents_and_fair_turns",
+        "tests.test_field.Connections.test_undelivered_hidden_change_not_policy_input",
+        "tests.test_loop"
+      ],
+      "exit_code": 0,
+      "seconds": 209.4518958970002,
+      "log": "00.log"
+    }
+  ]
+}

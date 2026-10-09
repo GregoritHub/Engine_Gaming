@@ -1,0 +1,15 @@
+test_initial_intention_changes_generated_consequence (tests.test_play.Play.test_initial_intention_changes_generated_consequence) ... ok
+test_invalid_and_competing_player_actions_refuse (tests.test_play.Play.test_invalid_and_competing_player_actions_refuse) ... ok
+test_playable_path_views_and_further_informed_choice (tests.test_play.Play.test_playable_path_views_and_further_informed_choice) ... ok
+test_save_load_and_privileged_commands_not_in_play (tests.test_play.Play.test_save_load_and_privileged_commands_not_in_play) ... ok
+test_new_episode_reuses_generated_experience (tests.test_continuation.Persistence.test_new_episode_reuses_generated_experience) ... ok
+test_legacy_session_bytes_preserved (tests.test_continuation.Persistence.test_legacy_session_bytes_preserved) ... ok
+test_three_agents_and_fair_turns (tests.test_field.Connections.test_three_agents_and_fair_turns) ... ok
+test_undelivered_hidden_change_not_policy_input (tests.test_field.Connections.test_undelivered_hidden_change_not_policy_input) ... ok
+test_claim_without_return_refused (tests.test_loop.Generativity.test_claim_without_return_refused) ... ok
+test_declared_loop_and_all_counterfactuals (tests.test_loop.Generativity.test_declared_loop_and_all_counterfactuals) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 209.315s
+
+OK

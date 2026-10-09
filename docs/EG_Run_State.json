@@ -2,24 +2,25 @@
   "schema": "engine-gaming-run-v1",
   "plan_version": "1.0",
   "status": "in_progress",
-  "current_batch": "EG07",
+  "current_batch": "EG08",
   "completed_batches": [
     "EG01",
     "EG02",
     "EG03",
     "EG04",
     "EG05",
-    "EG06"
+    "EG06",
+    "EG07"
   ],
   "source_commit": "ab674a36e9234dcbf46634367bfc2b42b8b3cd18",
   "source_tree": "294edf4170efa127814b99a999ecd52702b9a563",
   "run_id": "eg-20261009-0804",
-  "lease_expires_at": "2026-10-09T09:33:11.526728+00:00",
-  "next_step": "Build and test participant-only playable interface",
+  "lease_expires_at": "2026-10-09T09:34:57.277614+00:00",
+  "next_step": "Freeze final candidate; full relevant tests and preregistered release panel",
   "blocker": null,
   "acceptance_evidence": [
-    "docs/EG06_Record.md",
-    "evidence/EG06/attempt1/result.json"
+    "docs/EG07_Record.md",
+    "evidence/EG07/attempt3/result.json"
   ],
-  "last_verified_commit": "dcd884a825c28c6d8ed2a4a832bce65e251ced9b"
+  "last_verified_commit": "1cbaca7b8da2f52e5c953bc136315f94c1805710"
 }
