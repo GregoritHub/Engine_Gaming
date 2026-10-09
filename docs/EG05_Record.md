@@ -1,0 +1,9 @@
+# EG05 accepted bounded generative loop
+
+Input EG04 887d187ccd9a7c5c70198bd976f500c49a5b0a8f. Prospective EG05_Loop_Contract_v1.md. Added independent loop_audit.py and tests/test_loop.py; production scenario/policy unchanged. Command: python tools/verify_batch.py EG05 attempt1 tests.test_loop. Exit0, two methods including six complete counterfactual scenarios; frozen bytes and inherited source unchanged, no failed attempt.
+
+Raw checkpoints, reconstructed dependency edges, native/field/loop auditor output, exact references, wallet totals, interventions and hashes: evidence/EG05/panel-*/. The attempt1 freeze identifies the executed code. Connected and supported-correction arms produced caps 5→3→1 and consumed Alice1/Bryn5/Cass3. Severed, withheld-binding, inactive-new-experience and uncorrected-Shell arms produced no Alice material return. The exact generated intermediate is therefore necessary for the credited bounded pathway. Missing-return claims are rejected independently.
+
+Bryn and Cass's new intentions copy their paid retained personal output, derived from an actual observation of changed material stock. They are not supplied endpoint fixtures. The graph records exact native identities, and native auditors reconstruct the content transitions. Distinct types, local budgets, different material experience and Bryn's separate generated Shell history remain traceable. Extra setup and correction spending is explicitly visible in wallets; no price-only difference is credited as causal semantics.
+
+Harness withholding deliberately removes a local continuation pointer or prevents consuming a fresh observation, preserving native history; it is not a player power. No spontaneous goal formation, unrestricted meaning, human validity or unbounded play claim. Decision accepted. EG06 eligible.
