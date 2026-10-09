@@ -1,0 +1,17 @@
+{
+  "schema": "eg01-intake-v1",
+  "source_commit": "ab674a36e9234dcbf46634367bfc2b42b8b3cd18",
+  "source_tree": "294edf4170efa127814b99a999ecd52702b9a563",
+  "import": "Pinned git submodule preserving full source tree and upstream history; no source modifications",
+  "checks": [
+    "source identity and full tracked bytes clean",
+    "first_run example with ordinary audits and exact restore",
+    "tests_u2",
+    "tests_u3",
+    "tests_workflow_selection",
+    "sealed tests.test_socion",
+    "all 2048 type pair position transfers"
+  ],
+  "acceptance": "Every selected method passes, source unchanged, remote gitlink exact, clean checkout reproduces",
+  "not_claimed": "Full 742-method research release rerun or gaming runtime acceptance"
+}

@@ -1,11 +1,16 @@
 # Engine Gaming
 
-Authorized EG01–EG08 build in progress. No gaming release accepted yet.
+Building a finite game of interconnected agents, paid Crux processing, Shell dynamics and persistent development on a presentation-independent first-order world.
 
-The research engine is imported as a pinned submodule, preserving its exact source tree, sealed baseline, notices and upstream history.
+Status: EG01 source intake in progress. No gaming release accepted.
 
 ```sh
 git clone --recurse-submodules https://github.com/GregoritHub/Engine_Gaming.git
+cd Engine_Gaming
+git checkout engine-gaming
+git submodule update --init --recursive
 ```
 
-Source: `vendor/socionics` at `ab674a36e9234dcbf46634367bfc2b42b8b3cd18`. Do not resume the completed research automation or Phase 7.
+Python 3.12, standard library only. Research source is pinned under `vendor/socionics`; its history, licenses, sealed baseline and evidence remain intact. Source-relative paths in the build reference resolve under that directory. Game batches follow `project_sources/Engine_Gaming_Build_Reference_v1_0.txt`; current progress is in `docs/EG_Run_State.json`.
+
+The research release remains separate. No Phase 7 energy experiment or replenishment is authorized.

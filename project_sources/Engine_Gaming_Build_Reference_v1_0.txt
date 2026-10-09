@@ -1,0 +1,172 @@
+Engine Gaming Build Reference
+Version 1.0  •  9 October 2026  •  Project owner Greg
+Purpose and central goal
+Build a game whose central attraction is agentic generativity: interconnected agents interpret, choose, act, learn and develop within a shared world. Combine useful early relational geometry with the mature later Shell, memory and continuation mechanisms. Preserve a precise first order logic foundation so the world can support different presentations.
+This document is a self-contained implementation reference for future assistant sessions. It records the agreed direction, observed starting point, proposed engineering contracts, eight ordered batches, acceptance gates and recovery procedure. It specifies work to do; it is not evidence that the gaming build is complete.
+Agreed requirements
+Essential mechanisms. Socionics types, Crux processing, Shells and paid cognition are central to the game. Their independence from generic object definitions must never be interpreted as permission to remove them from the game.
+Interconnected agents. The field is a persistent pattern of causal influence among agents and shared world objects. Agent outputs must become consequential inputs to further activity, including feedback to their originators.
+Formal world. Object definitions and interpretation must conform to standard FOL semantics, taking Tarski’s World as the reference pattern. Presentation changes must not silently change world truth.
+Ordered build
+Batch
+Outcome
+EG01
+Imported source and mechanism inventory
+EG02
+Finite FOL world and compatibility adapter
+EG03
+Connected agents and causal transmission
+EG04
+Mature Shell mechanisms in field interactions
+EG05
+Three agent generative feedback loop
+EG06
+Retained development and continued activity
+EG07
+Playable and inspectable first scenario
+EG08
+Sustained play and release assessment
+
+Starting point and source inventory
+Destination: https://github.com/GregoritHub/Engine_GamingSource: https://github.com/GregoritHub/Socionics_Engine
+Inspected source commit: ab674a36e9234dcbf46634367bfc2b42b8b3cd18. The source README and final run state record Release 1.0 accepted, C7 complete at 7 of 7. The destination was empty when checked on 9 October 2026. The source was cloned locally; no source import, gaming implementation or destination commit was completed in this planning conversation. Recheck current repository state before execution.
+Read these current source entries
+Authority and status. AGENTS.md; docs/FB_Run_State.json; docs/FB_Job_Register.md; docs/Continuous_Build.md; docs/FB_Corrective_6_Record.md; evidence/Corrective6/Delivery_Decision.json. Historical register entries are superseded by the final accepted decision.
+Meaning and architecture. project_sources/HLE_Final_Build_Plan_v1_0.txt; project_sources/HLE_Final_Build_Companion_Theory_v1_0.txt; project_sources/Closure_Ledger_and_Final_Build_Plan_v0_1.txt; docs/research/Code_Map.md; docs/research/Capabilities.md; docs/research/Shells_and_Compensation.md. Use authoritative original documents when transcriptions are ambiguous.
+Objects and access. hle_unified/records.py, store.py, codec.py and particulars.py. Existing strengths include identity, exact revision references, immutable records, provenance, atomic changes and detached participant views. These records are not yet a general FOL signature and evaluator.
+Earlier structure. Under baseline/HLE_Rebuild_R21B/: hle/model_a.py, relations.py, socion.py, socion_records.py, socion_policy.py and tests/test_socion.py. An earlier preserved implementation is at baseline/crossing/vendor/r10/hle/ within that sealed tree.
+Later mechanisms. Under hle_unified/: crux_*; shell.py, shell_policy.py, shell_assessment.py, development*; workflow_shell_*, workflow_interruption_*, workflow_longitudinal_shell_audit.py, workflow_continuation.py, workflow_agenda.py and workflow_agenda_population.py. Inventory exact contracts and producers before combining these families.
+Verification already performed
+On the inspected source: 31 object tests and 32 access tests passed. Four focused sealed social tests passed: reciprocal exchange, changed action against a no-query control, learning by both participants, and hidden-state isolation. All 2,048 type-pair/position mappings were checked in the preserved R10 implementation. These checks do not constitute a full release rerun or validate a population field.
+The original 5.2.1 archive is indexed in the sealed reference/Source_Manifest.json. It was not materialized or inspected here. Consult docs/FB_Input_Inventory.json and evidence indices when exact archived inputs are required. Never claim that an index substitutes for the archived bytes.
+
+Formal world contract
+EG02 must turn the Tarski-style requirement into an executable contract. FOL guarantees presentation-independent truth relative to a fixed interpretation. Faithfulness of a renderer or adapter requires separate tests. Arbitrary visual projections may omit facts without changing them.
+Domain and identity. Declare a finite, nonempty domain per authoritative world snapshot. Distinguish enduring entity IDs from revision records. Decide how creation, retirement and historical queries select a domain. Object names are aliases, not identities; renaming a label must not create a new object.
+Signature. Declare constants and predicate symbols with fixed arity and argument constraints. Begin with a relational, function-free fragment of FOL with equality; add function symbols only if needed, with total interpretations. If using sorts, document their translation to ordinary FOL or the exact many-sorted semantics.
+Interpretation. Every declared constant denotes a domain member. Every declared predicate has a precise extension over domain tuples. Examples include Person, Item, Owns, Holds and Inside. Ownership, custody, physical containment and visibility are separate relations. Units, literals and numeric comparisons need explicit typing; Python boolean and integer equality must not collapse distinct values.
+Formula syntax. Use a validated syntax tree for variables, constants, atoms, equality, negation, conjunction, disjunction, implication and quantifiers. Specify variable binding and scope. Evaluate sentences without free variables; require an assignment for open formulas. Reject unknown symbols, wrong arities and malformed terms.
+Truth and missing information. Classical evaluation over a complete authoritative interpretation is two-valued. Absence from a fully specified predicate extension means false there. Missing information in an agent’s view is not automatically false. Track known, unknown, disputed and believed content in a separate epistemic layer; do not silently replace classical FOL semantics.
+Definitions and constraints. Distinguish executable defining formulas, primitive interpreted predicates, domain invariants and descriptive labels. Constraints such as unique custody are game axioms, not automatic properties of FOL. Check candidate states atomically and retain reasons for rejected transitions.
+Time and action. Specify the relation between snapshot time, event order, revision identity and proposition scope. Each action declares preconditions, effects and unchanged state. State explicitly how simultaneous or conflicting actions are ordered and rejected. FOL state semantics alone does not supply a scheduler or a physics engine.
+Presentations. Text, board, 2D and 3D views must query the same authoritative interpretation through stable IDs. Keep screen coordinates separate from world coordinates. A camera rotation must not reverse a world-fixed directional predicate. Distinguish an intentional world edit from a rendering change.
+Required checks. Exercise quantifier scope, aliases, identity versus revision, invalid signatures, round trips, historical queries, domain boundaries and view equivalence. For small finite worlds compare the evaluator with an independently written reference. Resource limits must yield an explicit unfinished evaluation, not a false answer.
+
+Field and agent integration contract
+The proposed field is a finite network of causally connected agents, objects, messages, commitments and institutions. It need not be a continuous physical field. Its defining property is that locally produced consequences circulate and reshape later activity.
+Retain the existing geometry
+Model A gives each type a local arrangement of shared information elements. The intertype mapping preserves the element while changing its positional landing: IEE leading Ne maps to SLI position 5; IEE creative Fi maps to ILE position 4. These are structural results in the project representation. They do not by themselves specify influence intensity, behavioral outcomes or spontaneous dynamics.
+The existing relation function maps receiver positions into sender coordinates; delivery uses the inverse. Preserve this convention and test direction explicitly. The estafette is a source-defined permutation, not an already-authorized universal tick law. Pure coordinate transport around a loop is not evidence of generated semantic development.
+Operational causal cycle
+A world event creates an eligible encounter. A recipient receives permitted information and processes it under its type, state, budget, memory and Shell conditions. It produces an interpretation or action. Valid execution changes a shared object, a communicated claim, a relationship or a retained capacity. Those consequences supply later encounters and can eventually return to the original actor.
+Connections. Declare directed delivery, observation and dependency edges. Separate possible contact from actual transmission, and transmission from completed processing. A shared object may mediate influence even without direct conversation. Additional strengths, decay, delay or distance rules are proposed game parameters requiring explicit contracts and controls.
+Agent locality. Policies receive permitted participant views, not authoritative hidden state, evaluator labels or another agent’s private memory. A field-wide coordinator may route events and schedule turns, but may not inject desired beliefs, answers, routes or outcomes.
+Shell placement. Inventory the mature five effect kinds and their exact scope. Preserve prevention, interruption after paid work, deformation, supported correction, recurrence and refusal of unsupported clearance where their contracts apply. Shells can affect processing and action, not just textual interpretation. They cannot directly rewrite an authoritative fact by changing a belief.
+Development. Retain exact causal links from experience to memory, acquired capability and subsequent behavior. Correction must be supported and scoped. Recurrence remains possible under renewed demand. Generated content must be consumed as a real input, not replaced by a prewritten endpoint.
+Scheduling and resources. Use explicit budgets, fair bounded scheduling, deterministic tie-breaking and replayable random seeds if stochastic rules are introduced. Preserve costs already incurred by failed or interrupted work. Replenishment or Model G pricing needs a separate stated game rule; do not silently enable the source project’s unauthorised Phase 7.
+
+Batches 1 and 2
+EG01 Establish the gaming project
+Goal. Create a durable source baseline in Engine_Gaming and identify the strongest compatible implementation of every required mechanism.
+Work. Fetch both repositories and inspect current instructions and heads. Import source with history preserved where possible, without overwriting destination work or force-pushing. Record the exact imported source commit and tree. Preserve sealed material, licenses, notices, historical failures and evidence paths. Establish a gaming-specific branch, README and operating instructions that distinguish the new plan from the completed research build.
+Inventory. For each mechanism record source path and version, meaning, state schema, dependencies, access contract, costs, tests, evidence, proposed role and integration risk. Examine earlier relational geometry alongside the newest Shell and continuation mechanisms. Do not assume that all old entry points remain compatible with all new checkpoint wrappers.
+Keep and separate. Keep identity, history, access, causal accounting, agents, Crux, Shells and development. Move maintenance-specific vocabulary and bounds behind explicit scenario adapters. Keep research orchestration and archives available for reproduction but outside the game’s ordinary runtime path. Deletion requires a dependency and evidence review.
+Deliverables. Source provenance record; mechanism inventory; retained test list; dependency map; gaming run state; migration receipt. Proposed repository records: docs/EG_Source_Inventory.md and docs/EG_Run_State.json.
+Gate. Fresh checkout runs the selected baseline examples and inherited tests; imported identity is verified; old source and evidence remain traceable. If private Git transport is unavailable, use an authorised supported connector or report the exact access limitation; do not call a local clone a completed remote import.
+EG02 Establish the FOL world
+Goal. Implement the formal world contract on page 3 while preserving existing identities and meanings.
+Work. Declare the signature, domain policy, formula syntax, finite evaluator, invariant validator and action boundary. Map existing records into the interpretation with an explicit versioned adapter. Separate actual facts from claims, hypotheses, memories and assessments. Declare unsupported legacy structures rather than inventing meanings for them.
+Deliverables. Versioned semantic contract; evaluator and reference evaluator; adapter mapping; small world fixtures; equivalent text and board projections. Define the contract before implementation and record the tested source identity.
+Gate. Both projections yield the same answers for the declared query set; renaming and camera changes preserve answers; malformed formulas and invalid transitions reject; save and restore preserve interpretation; hidden facts remain unavailable to agent policies.
+Dependency and status. EG02 depends on accepted EG01. Both batches are planned and unstarted at this document’s creation. Visual polish is not an EG02 acceptance requirement.
+
+Batches 3 and 4
+EG03 Connect agents through the world
+Goal. Integrate the preserved type geometry with current access, processing and world contracts so influence is causal and inspectable.
+Work. Choose an explicit adapter between old reception records and current agent execution. Define directed connections, delivery eligibility, scheduling order, processing completion and resulting events. Support direct messages and indirect encounters through shared objects. Keep each participant’s views, resources and memory separate.
+Deliverables. Field connection schema; type transport adapter; transmission and reception receipts; bounded scheduler; two-agent and three-agent fixtures; causal inspection output.
+Gate. A delivered and processed encounter changes a recipient’s later choice or usable outcome. Withholding delivery or processing removes that pathway. Hidden changes do not alter an uninformed policy. Directional transport preserves the information element; partial work and resource exhaustion behave honestly.
+Controls. Compare connected and disconnected worlds with matched initial state and scheduling. Check asymmetric edges, duplicate delivery, stale revisions, unavailable recipients and fair turns. Separate geometry effects from price effects rather than attributing every difference to type.
+EG04 Integrate mature Shell dynamics
+Goal. Make the later Shell mechanisms participate in connected agent activity without weakening their established meanings.
+Work. Map the exact mature effect families, initiation gates, interruption records, correction evidence, scope and recurrence rules onto EG03 events. Preserve the distinction between distorted processing, prevented work, interrupted work and world consequences. Connect Shell outputs to ordinary action validation and causal history.
+Deliverables. Shell integration contract and effect inventory; adapters; matched histories; a correction-and-recurrence scenario; independent raw-record checks. Reuse applicable later auditors, but verify their assumptions against the new schemas.
+Gate. The same relevant encounter is evaluated in undeformed, Shell-active and supported-correction conditions. Differences must be caused by actual mechanisms and recorded work. Include renewed demand on the same and changed targets, a failed correction, interruption after partial payment and refusal of unsupported blanket clearance.
+Controls. Withhold corrective evidence, forge a success flag, bypass a gate and present irrelevant evidence. Ordinary validators must reject the false claims. Preserve failed attempts and costs. A correction label alone cannot establish clearance.
+Dependencies and status. EG03 requires EG02; EG04 requires EG03 and the accepted mechanism inventory. Both are planned. If an old and new meaning conflict, isolate and document the conflict before adapting; do not silently equate their names.
+
+Batches 5 and 6
+EG05 Close the generative feedback loop
+Goal. Produce the first decisive demonstration of the game’s central promise: locally transformed consequences circulate through three agents and return to affect their originator.
+Work. Construct a small shared-object situation with three distinct agent histories. Provide initial conditions and high-level goals, then allow the scheduler and participant policies to generate the intermediate encounters, interpretations and actions. Feed exact committed outputs into later processing. Include a Shell-dependent branch of the causal history.
+Deliverables. Prospectively declared scenario and counterfactuals; execution trace; dependency graph; retained intermediate records; independent acceptance report; replay checkpoint.
+Gate. Show an actual A-to-B-to-C-to-A causal chain with meaningful semantic or material changes. The returning consequence changes A’s later choice or achievable outcome. At least one generated intermediate is indispensable to the credited result. A sequence of renamed fixtures or a rotating scheduler does not pass.
+Controls. Sever a declared connection, withhold a generated intermediate, hold relevant experience constant and remove the scoped Shell effect in separate matched runs. Name the expected causal dependency before evaluation. Allow legitimate convergence; never count a difference caused only by unequal time, resources or seed as the mechanism’s effect.
+Limit. This establishes bounded causal generativity within a supplied setting. It does not establish spontaneous goal formation, unrestricted meaning, human validity or indefinitely sustained play.
+EG06 Make development persist
+Goal. Ensure that prior interactions change future possibilities and behavior across continued episodes.
+Work. Integrate retained memories, acquired capabilities, relationships, obligations and generated-content continuation. Specify which histories are retained, which become inactive and how dependencies invalidate stale conclusions. Preserve the original causes and costs when restoring or extending a run.
+Deliverables. Versioned continuation contract; contrasting-history scenarios; exact restore checks; scoped correction and renewed-demand histories; measurements of stalls, duplicates and useful generated-result reuse.
+Gate. Agents with different relevant histories respond differently to a matched later situation through identifiable retained state. At least one later useful capability or consequence depends on earlier generated work. Continued Shell correction and recurrence respect scope. Interrupted and uninterrupted runs agree under the declared replay contract.
+Controls. Withhold the retained result while matching other conditions. Vary an irrelevant history item to check that claimed causal effects are specific. Exercise finite resource exhaustion, cancellation, repeated demand and prevention of duplicate rewards or refunds.
+Dependencies and status. EG05 requires EG04; EG06 requires EG05. Both are planned. EG05 is the first central-mechanism demonstration; EG06 establishes persistence, not the final gameplay release.
+
+Batches 7 and 8
+EG07 Make the first situation playable
+Goal. Let a player pursue an objective and intervene in the agent field through understandable world actions.
+Proposed setting. Use ownership, custody, borrowing, repair, promises and conflicting information because the inherited engine already gives them consequences. This is an implementation recommendation, not a settled genre, theme or final commercial design.
+Work. Choose the player’s role and information access explicitly. Add a small interface for inspecting known objects, choosing legal actions and seeing consequences. Keep player-facing language focused on the situation; offer a separate inspection mode for causal records, type routes and Shell mechanisms. Keep unrestricted truth inspection separate from ordinary play.
+Deliverables. Playable vertical slice; basic onboarding; save and load; a text or board presentation plus a second minimal view demonstrating shared semantics; usability observations and unresolved design decisions.
+Gate. A player can form an intention, act, encounter a generated consequence and make a further informed choice. Player commands pass the same world validation boundary as comparable agent commands. Views preserve logical answers and access limits. Save and load retain the active field and history.
+Open choices. Player as one agent or an external actor; turn pacing; visual style; loss and recovery; session duration. Choose enough for the slice when needed, with the user’s preferences; do not block the foundational batches on final art or genre.
+EG08 Evaluate sustained play and package
+Goal. Establish a bounded release with sustained consequential interaction, clear limits and reproducible evidence.
+Work. Before running the release panel, declare populations, horizons, seeds, budgets, scenarios, controls and performance ceilings. Expand beyond the first three-agent scenario. Measure latency, memory growth, resource exhaustion, deadlocks, activity monopolies, repeated outputs and dependency depth. Test malformed saves and simultaneous competing actions.
+Deliverables. Frozen release candidate; complete test and scenario receipts; causal inspection examples; installation or launch instructions; limitations; final decision; next-work register.
+Gate. Declared scenarios complete or stop for their declared legitimate reasons. Relevant historical and new tests pass on the frozen source. Causal effects survive the prescribed controls. Saves reproduce continued behavior. Performance meets the predeclared budget. Play observations support understandable, consequential choice; record evidence rather than claiming fun from test counts.
+Resource design. Finite sessions are a valid initial release. If replenishment, recovery cycles or Model G energy dynamics become necessary, introduce them as a separately specified and authorised rule with accounting controls. Do not grant invisible credits to prolong a demonstration.
+Dependencies and status. EG07 requires EG06; EG08 requires EG07. Both are planned. A failed gate yields a held candidate with preserved findings, not a completed release.
+
+Acceptance and evidence rules
+Acceptance combines semantic correctness, causal integration, persistent development and playability. No single test count, visual demonstration or release label substitutes for those four obligations.
+Area
+Evidence required
+FOL semantics
+Declared interpretation; formula/reference agreement; invalid syntax rejected; consistent identity and time.
+View independence
+Same snapshot and query agree across presentations; camera and labels cannot alter facts.
+Agent locality
+Hidden or undelivered information cannot affect an agent’s policy through a concealed path.
+Field causality
+A real interaction changes later activity; a matched severed-path control removes that contribution.
+Shell integrity
+Mechanism-specific deformation and scoped correction are reconstructed from paid work and evidence.
+Generativity
+Exact generated outputs become necessary later inputs; authored conditions are labelled.
+Persistence
+Retained experience changes later behavior; replay preserves costs, failures and relevant state.
+Playability
+A player can understand, choose and observe consequences in the declared slice.
+Per batch record
+Save objective and scope, input commit, relevant contracts, changed paths, commands, environment, test IDs, exit codes, raw trace locations, hashes, controls, limitations, acceptance decision and next eligible batch. Preserve failed attempts in separate output directories. Freeze the tested executable bytes before a formal acceptance run; any code change requires a new identified candidate.
+Independent checks
+Use independent reconstruction for consequential claims: interpret raw histories and receipts without asking the production executor to certify its own output. Shared record schemas are acceptable; shared decision logic cannot count as independent confirmation. Do not claim independence merely because a second function calls the same code.
+Failure interpretation
+Distinguish invalid input, legitimate refusal, incomplete work, exhausted resources, recurrence and implementation defects. Unknown facts and unfinished evaluation are not false facts. A forged status field must not establish a result. Preserve prior meanings when changing schemas; test old checkpoint restore or provide an explicit migration with equivalence limits.
+Bounded claims
+The research release is evidence for its own scenarios and contracts. Its reported 742 methods and 54 jobs were not rerun during this conversation. New game behavior requires new evidence. Treat type geometry and Shell rules as the game’s formal mechanisms; this build does not establish claims about human psychology.
+
+Resumption and project decisions
+Instructions for a future assistant
+Read this document first, then fetch current Engine_Gaming and its AGENTS.md and run state. Inspect current source references and destination changes. Treat this document as the initial plan; explicit subsequent user decisions and verified later project records take precedence. Do not restart completed batches or rely on a remembered local workspace.
+The immediate next work is EG01 if implementation is authorised and its gate is not already satisfied. The user requested this reference document in the current turn; its existence does not itself claim that all implementation, publication or automatic future execution has been authorised. Reuse actual session authorisation where present rather than repeatedly asking for routine reversible work.
+Keep the research repository’s completed build separate from gaming development. Do not resume its old automation or change its terminal state as part of this plan. Any source-protection rule or unresolved theory ruling still applies to affected inherited material. The source Phase 7 restriction remains unresolved by this document.
+Proposed durable working records
+Maintain docs/EG_Run_State.json, docs/EG_Decisions.md, docs/EG_Source_Inventory.md and one batch record per EG identifier. A useful run state includes schema version, plan version, status, current and completed batches, source commit, last verified commit, acceptance evidence, next step, blocker and active owner or lease if multiple workers may operate. Claim ownership atomically before concurrent mutation; preserve unrelated changes.
+At every handoff, commit the code, tests, contracts and records belonging to the verified checkpoint. Keep source identity and test identity together. A local clone, local file or unsent commit is not a confirmed remote save. If execution stops, report the exact completed work, remaining gate and resumable next action.
+Decisions already settled
+Destination is Engine_Gaming. Agentic generativity is the selling point. The field and mature Shell dynamics must be integrated. FOL semantics are foundational and remain a cross-batch invariant. Different presentations share authoritative world meaning; agents can hold different, incomplete or distorted accounts.
+Decisions still open
+Exact snapshot domain and temporal encoding; typed vocabulary and game axioms; adapter strategy across runtime generations; connection delays and any strength model; player role and setting; resource replenishment; longer-term objectives and population size; platform and presentation. Record defaults as engineering decisions with a reason and a reversal cost. None may quietly remove the central mechanisms.
+Reference anchors
+All repository paths in this document are relative to Socionics_Engine unless stated otherwise. The source commit on page 2 anchors the observations. Tarski’s World reference: https://proto.gradegrinder.net/Products/tw-index.html. Its interpreted blocks-world approach motivates the semantic contract; this project does not claim product compatibility or certification.
