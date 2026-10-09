@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "source_unchanged": true,
+  "results": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-c",
+        "import engine_gaming,unittest,sys;sys.path.insert(0,str(engine_gaming.SOURCE/\"baseline\"/\"HLE_Rebuild_R21B\")); suite=unittest.defaultTestLoader.loadTestsFromNames(['tests_u2.test_acceptance', 'tests_u2.test_controls', 'tests_u2.test_legacy_sequences', 'tests_u3.test_acceptance', 'tests_u3.test_controls', 'tests_c5.test_shell_routes.ShellRouteTests.test_active_interruption_preserves_first_step_and_exact_resume', 'tests_c5.test_shell_routes.ShellRouteTests.test_local_release_does_not_clear_another_target', 'tests_c5.test_shell_routes.ShellRouteTests.test_raw_auditor_rejects_false_completion_endpoint_and_child', 'tests_c5.test_shell_routes.ShellRouteTests.test_unsupported_effect_cannot_be_cleared']); r=unittest.TextTestRunner(verbosity=2).run(suite);sys.exit(not r.wasSuccessful())"
+      ],
+      "exit_code": 0,
+      "seconds": 13.246002337997197,
+      "log": "00.log"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "tools/release_panel.py",
+        "evidence/EG08/attempt2/panel"
+      ],
+      "exit_code": 0,
+      "seconds": 194.91495553401182,
+      "log": "01.log"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "tools/fresh_checkout.py"
+      ],
+      "exit_code": 0,
+      "seconds": 19.634998494002502,
+      "log": "02.log"
+    }
+  ]
+}

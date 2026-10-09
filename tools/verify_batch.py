@@ -10,7 +10,7 @@ def run(batch, attempt, commands):
     before=freeze()
     source=subprocess.check_output(['git','-C',str(ROOT/'vendor/socionics'),'rev-parse','HEAD'],text=True).strip()
     if subprocess.check_output(['git','-C',str(ROOT/'vendor/socionics'),'status','--porcelain'],text=True).strip():raise ValueError('modified inherited source')
-    manifest={'source_commit':source,'files':before,'python':sys.version,'commands':commands}
+    manifest={'gaming_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'source_commit':source,'files':before,'python':sys.version,'commands':commands}
     (out/'freeze.json').write_text(json.dumps(manifest,indent=2)+'\n')
     results=[]
     for i,command in enumerate(commands):

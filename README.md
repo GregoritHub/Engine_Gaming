@@ -2,7 +2,7 @@
 
 A finite, playable agent workshop built on the pinned Socionics Engine. Agents pay to read, interpret and act. Generated proposals circulate through distinct types; retained Shell patterns can prevent work, interrupt it, or change under supported correction. The world also exposes a presentation-independent finite first-order interpretation.
 
-Current work: EG07 playable candidate; final release assessment follows in EG08. See `docs/EG_Run_State.json` for the verified checkpoint.
+**Release 0.1 accepted: EG01–EG08 complete.** The verified scope is a finite workshop with measured two-, three-, and four-agent sessions. See `docs/EG08_Record.md` for the142-method acceptance evidence and performance results.
 
 ## Start
 
@@ -11,7 +11,6 @@ Python **3.12**, standard library only:
 ```sh
 git clone --recurse-submodules https://github.com/GregoritHub/Engine_Gaming.git
 cd Engine_Gaming
-git checkout engine-gaming
 git submodule update --init --recursive
 python -m engine_gaming
 ```
@@ -41,3 +40,5 @@ python -m unittest discover -s tests -v
 ```
 
 The research build is complete and separate. This game does not resume its automation, enable Phase 7 pricing, replenish resources invisibly, or establish claims about human psychology. The slice uses authored goals and a finite explicit policy; it is not a claim of unrestricted or indefinitely sustained generativity. No human playtest has yet been claimed.
+
+Release verification: `python tools/release_verify.py YOUR_NEW_ATTEMPT_NAME` freezes and runs the complete relevant suite and declared panels. Use a new name so earlier evidence is preserved.

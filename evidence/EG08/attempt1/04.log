@@ -1,0 +1,79 @@
+Cloning into '/tmp/engine-gaming-clean-t374h0ba/game'...
+done.
+Cloning into '/tmp/engine-gaming-clean-t374h0ba/game/vendor/socionics'...
+done.
+Submodule path 'vendor/socionics': checked out 'ab674a36e9234dcbf46634367bfc2b42b8b3cd18'
+You are Alice in a shared workshop. Get an allocation reply that you can use.
+Bryn and Cass form proposals from what their own work reveals.
+Your past experience makes an available task feel as if it needs permission.
+Try: propose 5, reflect, wait 600, inspect, wait 12, consume 1.
+Work and supplies are finite. Reading, thinking and reconsidering cost work.
+
+status / board       Show only your received information
+propose N            Form an initial limit from 1 to 5
+reflect              Reconsider your retained authorization pattern
+wait N               Let the agents work for N turns (1–1000)
+inspect              Pay to inspect your own supplies; wait to read the result
+consume N            Use owned supplies through normal world validation
+cancel               Stop your current work; spent resources stay spent
+renew                Begin another allocation from actual retained experience
+save PATH            Save the active field and history (new file only)
+load PATH            Restore and verify a saved session
+help / quit          Commands / exit
+
+Alice · turn 0
+Last known supplies: 12 (revision 1). Work budget: 3908.
+Ready to propose. Completed returns: 0.
+Received allocation limits: none received. Other inventories are unknown.
+
+> propose 5
+Done.
+Alice · turn 0
+Last known supplies: 12 (revision 1). Work budget: 3905.
+Ready to propose. Completed returns: 0.
+Received allocation limits: none received. Other inventories are unknown.
+
+> reflect
+Done.
+Alice · turn 0
+Last known supplies: 12 (revision 1). Work budget: 3876.
+Ready to propose. Completed returns: 0.
+Received allocation limits: none received. Other inventories are unknown.
+
+> wait 600
+Advanced 600 turns.
+Alice · turn 600
+Last known supplies: 12 (revision 1). Work budget: 3747.
+Allocation returned. Completed returns: 1.
+Received allocation limits: 1. Other inventories are unknown.
+
+> board
+WORKSHOP / ALICE
+SUPPLIES  12  |  WORK BUDGET  3747
+TURN  600  |  COMPLETED RETURNS  1
+RECEIVED LIMITS  1
+STATE  Allocation returned
+Last known supplies revision: 1. Other inventories are unknown.
+
+> inspect
+Inspection complete. Advance turns to read the result.
+Alice · turn 600
+Last known supplies: 12 (revision 1). Work budget: 3744.
+Allocation returned; work pending — advance turns to continue. Completed returns: 1.
+Received allocation limits: 1. Other inventories are unknown.
+
+> wait 12
+Advanced 12 turns.
+Alice · turn 612
+Last known supplies: 11 (revision 2). Work budget: 3742.
+Allocation returned. Completed returns: 1.
+Received allocation limits: 1. Other inventories are unknown.
+
+> consume 1
+Consumed 1 supply units. Inspect again to refresh your information.
+Alice · turn 612
+Last known supplies: 11 (revision 2). Work budget: 3739.
+Allocation returned. Completed returns: 1.
+Received allocation limits: 1. Other inventories are unknown.
+
+CLEAN CHECKOUT PASSED; pinned inherited commit verified.

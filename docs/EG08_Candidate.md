@@ -1,0 +1,5 @@
+# EG08 release candidate
+
+Input accepted EG07 remote commit 9b4449d3afb6cb006c568904c14583c1bb86a646. Prospective release panel contracts/EG08_Release_Panel_v1.md was saved before implementation. Final changes add measured release/fresh-checkout tooling, malformed-save controls, strict type-sensitive command retries, a bounded --load path, and explicit pending-read/action feedback. The mechanics and price schemas are unchanged from EG07 candidate3.
+
+Formal command: python tools/release_verify.py attempt1. It freezes game files, tests, tools, contracts and inherited commit, then runs the entire new suite, selected inherited U2/U3/C5 regressions, all32 sealed socion methods, fixed resource/population panels and an offline fresh Git checkout using the exact pinned submodule objects. Offline clone validates checkout packaging; remote saving is verified separately by GitHub commit and reference receipts. Candidate remains held until every command passes and final delivery records are saved.

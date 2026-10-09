@@ -1,0 +1,78 @@
+{
+  "connected": {
+    "full_loop": true,
+    "consumed": {
+      "alice": 1,
+      "bryn": 5,
+      "cass": 3
+    },
+    "caps": [
+      5,
+      3,
+      1
+    ],
+    "turns": 600
+  },
+  "severed": {
+    "full_loop": false,
+    "consumed": {
+      "alice": 0,
+      "bryn": 5,
+      "cass": 0
+    },
+    "caps": [
+      5
+    ],
+    "turns": 600
+  },
+  "withheld": {
+    "full_loop": false,
+    "consumed": {
+      "alice": 0,
+      "bryn": 5,
+      "cass": 0
+    },
+    "caps": [
+      5
+    ],
+    "turns": 600
+  },
+  "constant_history": {
+    "full_loop": false,
+    "consumed": {
+      "alice": 0,
+      "bryn": 5,
+      "cass": 0
+    },
+    "caps": [
+      5
+    ],
+    "turns": 600
+  },
+  "shell": {
+    "full_loop": false,
+    "consumed": {
+      "alice": 0,
+      "bryn": 0,
+      "cass": 0
+    },
+    "caps": [
+      5
+    ],
+    "turns": 600
+  },
+  "corrected": {
+    "full_loop": true,
+    "consumed": {
+      "alice": 1,
+      "bryn": 5,
+      "cass": 3
+    },
+    "caps": [
+      5,
+      3,
+      1
+    ],
+    "turns": 600
+  }
+}

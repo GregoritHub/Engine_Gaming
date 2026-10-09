@@ -10,7 +10,7 @@ Try: propose 5, reflect, wait 600, inspect, wait 12, consume 1.
 Work and supplies are finite. Reading, thinking and reconsidering cost work.
 
 status / board       Show only your received information
-propose N            Form an initial spending-limit intention
+propose N            Form an initial limit from 1 to 5
 reflect              Reconsider your retained authorization pattern
 wait N               Let the agents work for N turns (1–1000)
 inspect              Pay to inspect your own supplies; wait to read the result
@@ -41,7 +41,11 @@ def command(session,line,mode='text'):
     elif verb in ('reflect','inspect','cancel','renew') and len(parts)==1:extra={}
     else:raise ValueError('Unknown command. Type help.')
     r=session.act(dict(id='play:'+str(len(session.commands)+1),kind='advance' if verb=='wait' else verb,**extra))
-    return session,('Done.' if r['ok'] else 'Could not finish: '+r['error'])+'\n'+render(session,mode)
+    notice='Done.'
+    if verb=='wait':notice='Advanced '+parts[1]+' turns.'
+    elif verb=='inspect':notice='Inspection complete. Advance turns to read the result.'
+    elif verb=='consume' and not session.field.pending[session.field.actors[0]]:notice='Consumed '+parts[1]+' supply units. Inspect again to refresh your information.'
+    return session,(notice if r['ok'] else 'Could not finish: '+r['error'])+'\n'+render(session,mode)
 
 def main(argv=None):
     p=argparse.ArgumentParser(description='Finite agent workshop');p.add_argument('--load');p.add_argument('--view',choices=('text','board'),default='text');p.add_argument('--demo',action='store_true');p.add_argument('--inspect-truth',metavar='SAVE');args=p.parse_args(argv)
@@ -49,6 +53,7 @@ def main(argv=None):
         path=pathlib.Path(args.inspect_truth)
         if path.stat().st_size>32_000_000:raise ValueError('save too large')
         print(dumps(inspect_truth(Session.restore(path.read_text()))));return 0
+    if args.load and pathlib.Path(args.load).stat().st_size>32_000_000:raise ValueError('save too large')
     s=Session.restore(pathlib.Path(args.load).read_text()) if args.load else Session()
     print(HELP);print(render(s,args.view))
     if args.demo:

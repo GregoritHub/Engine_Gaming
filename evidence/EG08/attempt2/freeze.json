@@ -1,0 +1,67 @@
+{
+  "gaming_commit": "aac4e71092f488622eb83a28686425dc6068e751",
+  "source_commit": "ab674a36e9234dcbf46634367bfc2b42b8b3cd18",
+  "files": {
+    "contracts/EG01_Protocol_v1.json": "d5bd1abfb3765a6e5e50b8bf6d78749848ed78967f7b147fe51a81ccc088ac38",
+    "contracts/EG02_FOL_Contract_v1.md": "d5963316ec592e48358c076e053cb8117eaa3913511303e940a65c34bb800943",
+    "contracts/EG03_Field_Contract_v1.md": "750259407e7f11dc88a94bc50c362608d123785f3bff4d9540d2b20396bf6f98",
+    "contracts/EG04_Shell_Contract_v1.md": "85c2a1edeeff22e3f6c2642ffe02cb3b5cac2f6dbc6aa657dbc30ff1b95ca855",
+    "contracts/EG04_Shell_Contract_v1.sha256": "ca4abb954e1ca63140683990e8e8bea8a7c6434c5ae6d1ad370e4e280c9cf60e",
+    "contracts/EG05_Loop_Contract_v1.md": "8812e22457ceb3d2683af7c1ab593df5dd4c7ed338a424de7efbafd73209f94d",
+    "contracts/EG05_Loop_Contract_v1.sha256": "892ba19eabcaf057b6f634367ccf5bcf2f81bea6e51486e4ce4bda416b0669d1",
+    "contracts/EG06_Continuation_Contract_v2.md": "0c2fa8839f1df9e160763508360e728fb115c3990ff6fd3cfa2824c03cf7163d",
+    "contracts/EG06_Continuation_Contract_v2.sha256": "d4788771043656f7e810eac4538bd0de8a79a5b1dc2645eddb15a9cd2cf181d5",
+    "contracts/EG07_Local_Demand_Addendum_v3.md": "f2190e42a5a83c963fdb96d985c63c745e28b108e717df48b3cef68ea9e72440",
+    "contracts/EG07_Local_Demand_Addendum_v3.sha256": "e364486af6f9f43b74b4a3f1e498d83e392807d12413cf08903b7b871917e288",
+    "contracts/EG07_Play_Contract_v1.md": "44f6db7970c76ec7dc96c10cddedcd9d8389d239be039ac7d6fc8364c00c665a",
+    "contracts/EG07_Play_Contract_v1.sha256": "4074a5400fbc88e5b82eaa82ba3fb2ad5971f23239aa3e765f899334b7cb85b7",
+    "contracts/EG07_Repair_Addendum_v2.md": "d1e1f03a8868354f0b9fde01792b91f1734221fa9e949b5cc7b5d32d652e66c4",
+    "contracts/EG07_Repair_Addendum_v2.sha256": "c622a7c841688ba2de278841b21d8d504ed196a3390fc4bf675d8ba18b8c44e0",
+    "contracts/EG08_Release_Panel_v1.md": "1c3b12da2d8b9f99103171d11260896b6b165bf2230055faadf6b8fe08e8903d",
+    "contracts/EG08_Release_Panel_v1.sha256": "78f442f9e5f391f66648bc5f6a1a4137a95f19d9c33534a90c93ce914e17a833",
+    "contracts/EG_Contract_Manifest.json": "a25db1dc92b0d30818e7b9ac42837c5e893d339ae60f39f09c14edcf51baefeb",
+    "engine_gaming/__init__.py": "38dddcdeb60d6368293d4b2c890517d7dd251b86b242a92253223647478f686e",
+    "engine_gaming/__main__.py": "e22e7261b032a2b541ec1b351b6526a8fa73f094ac2b3d2f916321934549464d",
+    "engine_gaming/development_adapter.py": "24b66bf470d6f2749acb80ab6c5a9d074ed0b92e3b845c3b6a24f801a0646ced",
+    "engine_gaming/field.py": "a6282c65e1e924667117773d22c580d009022dae78298c3a8e579570e2a777b8",
+    "engine_gaming/field_audit.py": "97f7c48d75e0c37694c2d508e0ed6243fe03d6917968d3b441b051a28681f189",
+    "engine_gaming/field_policy.py": "650e8fcae4efd82707c368fabe5f8d4198238dc3c5806ec644fae1e37d5f07dd",
+    "engine_gaming/fol.py": "35e01200642818b5146a2003a933ac7b7a0d7d131bfbddde7835ec17aece222c",
+    "engine_gaming/fol_reference.py": "8fed5af91819f2ec9e64e832fbf952b0cd9efc67bcbbda62e096dee480722380",
+    "engine_gaming/loop_audit.py": "739ffd138a2ec96351bcaa5110016ae6d8d40b62988371dc7c0959977d9542bb",
+    "engine_gaming/play.py": "60f54a2d084103a313b4eda475093af4ddc49fa9a565b82894eb1da89681dd42",
+    "engine_gaming/scenario.py": "2562b48abba9e7afb42ab1008b3c0412382adac4aea678c5d138d4c4589186ae",
+    "engine_gaming/session.py": "3d03dc10408e32b25c96aaa4273071e7cad8fefcf8c92348cce077191d494b27",
+    "engine_gaming/shell_adapter.py": "e97eebe8a08d6b147c5f15f9e01dc143f54edff616f7d9ea94b81f8fad2afde9",
+    "engine_gaming/world_adapter.py": "903237b5e019614599b61d9eb24bed97cb15071badca1e92d0d3e9aa48084157",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_continuation.py": "c85667ef312795b231a724d374bb198f94382f22c75f4d0f3256723cc30b1254",
+    "tests/test_field.py": "f8f700690c8b841778867fcd20330ec1d4934eaa3ec7e6a25588419ef3f1f4fe",
+    "tests/test_fol.py": "92fff4e2d4a100cbb1ac7b513504714cba52380d690176698040f413953a5e91",
+    "tests/test_loop.py": "1b02d2955082816729f6012168e0a5e3559c8442651da59f38d843aedf375477",
+    "tests/test_play.py": "24e651279a98054f1c1144f06d4c2a255f290bd882cec34db7b9dc0a4477b415",
+    "tests/test_release.py": "9dbb21b198e228c91dfbe3422b45f7309fb57a4bb226ca003c6c9ee1b3618060",
+    "tests/test_shell.py": "b2d2164b996ff3a28cbc839631b266173291eccddff7f8ebd207e240720d69a6",
+    "tools/fresh_checkout.py": "30124123ec9c87990acc07645e6be9093f716613bb17df26fa588930e0804a80",
+    "tools/release_panel.py": "46b0b660236ac75520641819cb36c6fc3bae7176c3d179e7665747713b4f91ed",
+    "tools/release_verify.py": "2acaaf3725d54edada513dffa3a2090da57a219f1e64727daac9e4d2f8e872bf",
+    "tools/verify_batch.py": "85f4696e2e0e9b4284cb183350e57c126718f7efc7c68f378b892a314d344edd"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "commands": [
+    [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-c",
+      "import engine_gaming,unittest,sys;sys.path.insert(0,str(engine_gaming.SOURCE/\"baseline\"/\"HLE_Rebuild_R21B\")); suite=unittest.defaultTestLoader.loadTestsFromNames(['tests_u2.test_acceptance', 'tests_u2.test_controls', 'tests_u2.test_legacy_sequences', 'tests_u3.test_acceptance', 'tests_u3.test_controls', 'tests_c5.test_shell_routes.ShellRouteTests.test_active_interruption_preserves_first_step_and_exact_resume', 'tests_c5.test_shell_routes.ShellRouteTests.test_local_release_does_not_clear_another_target', 'tests_c5.test_shell_routes.ShellRouteTests.test_raw_auditor_rejects_false_completion_endpoint_and_child', 'tests_c5.test_shell_routes.ShellRouteTests.test_unsupported_effect_cannot_be_cleared']); r=unittest.TextTestRunner(verbosity=2).run(suite);sys.exit(not r.wasSuccessful())"
+    ],
+    [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/release_panel.py",
+      "evidence/EG08/attempt2/panel"
+    ],
+    [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/fresh_checkout.py"
+    ]
+  ]
+}

@@ -1,0 +1,48 @@
+test_acquired_capacity_depends_on_independent_observed_practice (test_continuation.Persistence.test_acquired_capacity_depends_on_independent_observed_practice) ... ok
+test_cancel_keeps_spending_and_stops_reward (test_continuation.Persistence.test_cancel_keeps_spending_and_stops_reward) ... ok
+test_exact_partial_replay_and_future (test_continuation.Persistence.test_exact_partial_replay_and_future) ... ok
+test_forged_save_and_duplicate_commands (test_continuation.Persistence.test_forged_save_and_duplicate_commands) ... ok
+test_legacy_session_bytes_preserved (test_continuation.Persistence.test_legacy_session_bytes_preserved) ... ok
+test_new_episode_reuses_generated_experience (test_continuation.Persistence.test_new_episode_reuses_generated_experience) ... ok
+test_relevant_correction_and_irrelevant_history (test_continuation.Persistence.test_relevant_correction_and_irrelevant_history) ... ok
+test_asymmetric_edge_and_unavailable (test_field.Connections.test_asymmetric_edge_and_unavailable) ... ok
+test_delivery_not_read_and_duplicate (test_field.Connections.test_delivery_not_read_and_duplicate) ... ok
+test_finite_exhaustion_keeps_paid_partial_work (test_field.Connections.test_finite_exhaustion_keeps_paid_partial_work) ... ok
+test_forged_processing_rejected (test_field.Connections.test_forged_processing_rejected) ... ok
+test_indirect_shared_object_subscription (test_field.Connections.test_indirect_shared_object_subscription) ... ok
+test_partial_processing_and_restore (test_field.Connections.test_partial_processing_and_restore) ... ok
+test_processed_delivery_changes_material_outcome (test_field.Connections.test_processed_delivery_changes_material_outcome) ... ok
+test_stale_competing_actions_and_duplicate_command (test_field.Connections.test_stale_competing_actions_and_duplicate_command) ... ok
+test_three_agents_and_fair_turns (test_field.Connections.test_three_agents_and_fair_turns) ... ok
+test_undelivered_hidden_change_not_policy_input (test_field.Connections.test_undelivered_hidden_change_not_policy_input) ... ok
+test_aliases_are_identity_not_label (test_fol.Semantics.test_aliases_are_identity_not_label) ... ok
+test_all_tiny_unary_interpretations (test_fol.Semantics.test_all_tiny_unary_interpretations) ... ok
+test_atomic_stale_and_historical_queries (test_fol.Semantics.test_atomic_stale_and_historical_queries) ... ok
+test_independent_truth_sets_scope_and_connectives (test_fol.Semantics.test_independent_truth_sets_scope_and_connectives) ... ok
+test_invariants (test_fol.Semantics.test_invariants) ... ok
+test_malformed_and_hidden_branches_reject (test_fol.Semantics.test_malformed_and_hidden_branches_reject) ... ok
+test_native_adapter_and_hidden_view (test_fol.Semantics.test_native_adapter_and_hidden_view) ... ok
+test_open_assignment_and_budget (test_fol.Semantics.test_open_assignment_and_budget) ... ok
+test_save_revalidate_and_immutable (test_fol.Semantics.test_save_revalidate_and_immutable) ... ok
+test_text_board_label_camera_equivalence (test_fol.Semantics.test_text_board_label_camera_equivalence) ... ok
+test_claim_without_return_refused (test_loop.Generativity.test_claim_without_return_refused) ... ok
+test_declared_loop_and_all_counterfactuals (test_loop.Generativity.test_declared_loop_and_all_counterfactuals) ... ok
+test_initial_intention_changes_generated_consequence (test_play.Play.test_initial_intention_changes_generated_consequence) ... ok
+test_invalid_and_competing_player_actions_refuse (test_play.Play.test_invalid_and_competing_player_actions_refuse) ... ok
+test_playable_path_views_and_further_informed_choice (test_play.Play.test_playable_path_views_and_further_informed_choice) ... ok
+test_save_load_and_privileged_commands_not_in_play (test_play.Play.test_save_load_and_privileged_commands_not_in_play) ... ok
+test_forged_budget_and_unknown_operations_reject (test_release.ReleaseControls.test_forged_budget_and_unknown_operations_reject) ... ok
+test_views_never_supply_foreign_inventory (test_release.ReleaseControls.test_views_never_supply_foreign_inventory) ... ok
+test_wrong_types_duplicate_identity_and_malformed_save (test_release.ReleaseControls.test_wrong_types_duplicate_identity_and_malformed_save) ... ok
+test_all_five_effects_and_paid_correction (test_shell.Shells.test_all_five_effects_and_paid_correction) ... ok
+test_auditor_rejects_false_success_and_bypass (test_shell.Shells.test_auditor_rejects_false_success_and_bypass) ... ok
+test_generated_origin_retained_and_restriction_recurs (test_shell.Shells.test_generated_origin_retained_and_restriction_recurs) ... ok
+test_interruption_retains_paid_step_without_destination (test_shell.Shells.test_interruption_retains_paid_step_without_destination) ... ok
+test_other_target_release_does_not_clear (test_shell.Shells.test_other_target_release_does_not_clear) ... ok
+test_unread_and_stale_admission_cannot_bypass (test_shell.Shells.test_unread_and_stale_admission_cannot_bypass) ... ok
+test_unsupported_and_irrelevant_correction_refused (test_shell.Shells.test_unsupported_and_irrelevant_correction_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 537.387s
+
+OK

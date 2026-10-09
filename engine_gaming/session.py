@@ -32,11 +32,11 @@ class Session:
         if type(command) is not dict or type(command.get('id')) is not str or not command['id'].strip() or len(command['id'])>100:raise ValueError('named command required')
         for old,result in zip(self.commands,self.results):
             if old['id']==command['id']:
-                if old!=command:raise ValueError('command identity reused with different content')
+                if json.dumps(old,sort_keys=True)!=json.dumps(command,sort_keys=True):raise ValueError('command identity reused with different content')
                 return result
         if len(self.commands)>=2048:raise ValueError('session command limit')
         kind=command.get('kind');fields={'advance':{'turns'},'cancel':set(),'renew':set(),'reflect':set(),'propose':{'cap'},'inspect':set(),'consume':{'amount'}}
-        if kind not in fields or set(command)!={'id','kind',*fields[kind]}:raise ValueError('unknown command or fields')
+        if type(kind) is not str or kind not in fields or set(command)!={'id','kind',*fields[kind]}:raise ValueError('unknown command or fields')
         f=self.field;e=f.engine;a=f.actors[0]
         if kind=='advance':
             n=command['turns']

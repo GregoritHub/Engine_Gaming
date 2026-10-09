@@ -1,0 +1,56 @@
+> propose 5
+
+Done.
+Alice · turn 0
+Last known supplies: 12 (revision 1). Work budget: 3905.
+Ready to propose. Completed returns: 0.
+Received allocation limits: none received. Other inventories are unknown.
+
+> reflect
+
+Done.
+Alice · turn 0
+Last known supplies: 12 (revision 1). Work budget: 3876.
+Ready to propose. Completed returns: 0.
+Received allocation limits: none received. Other inventories are unknown.
+
+> wait 600
+
+Advanced 600 turns.
+Alice · turn 600
+Last known supplies: 12 (revision 1). Work budget: 3747.
+Allocation returned. Completed returns: 1.
+Received allocation limits: 1. Other inventories are unknown.
+
+> board
+
+WORKSHOP / ALICE
+SUPPLIES  12  |  WORK BUDGET  3747
+TURN  600  |  COMPLETED RETURNS  1
+RECEIVED LIMITS  1
+STATE  Allocation returned
+Last known supplies revision: 1. Other inventories are unknown.
+
+> inspect
+
+Inspection complete. Advance turns to read the result.
+Alice · turn 600
+Last known supplies: 12 (revision 1). Work budget: 3744.
+Allocation returned; work pending — advance turns to continue. Completed returns: 1.
+Received allocation limits: 1. Other inventories are unknown.
+
+> wait 12
+
+Advanced 12 turns.
+Alice · turn 612
+Last known supplies: 11 (revision 2). Work budget: 3742.
+Allocation returned. Completed returns: 1.
+Received allocation limits: 1. Other inventories are unknown.
+
+> consume 1
+
+Consumed 1 supply units. Inspect again to refresh your information.
+Alice · turn 612
+Last known supplies: 11 (revision 2). Work budget: 3739.
+Allocation returned. Completed returns: 1.
+Received allocation limits: 1. Other inventories are unknown.
