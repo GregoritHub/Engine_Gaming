@@ -2,18 +2,20 @@
   "schema": "engine-gaming-run-v1",
   "plan_version": "1.0",
   "status": "in_progress",
-  "current_batch": "EG02",
+  "current_batch": "EG03",
   "completed_batches": [
-    "EG01"
+    "EG01",
+    "EG02"
   ],
   "source_commit": "ab674a36e9234dcbf46634367bfc2b42b8b3cd18",
   "source_tree": "294edf4170efa127814b99a999ecd52702b9a563",
   "run_id": "eg-20261009-0804",
-  "lease_expires_at": "2026-10-09T08:44:26.699962+00:00",
-  "next_step": "Implement and verify contracts/EG02_FOL_Contract_v1.md",
+  "lease_expires_at": "2026-10-09T08:51:35.635099+00:00",
+  "next_step": "Implement connected field and native scenario adapter",
   "blocker": null,
   "acceptance_evidence": [
-    "docs/EG01_Record.md",
-    "evidence/EG01/SHA256.json"
-  ]
+    "docs/EG02_Record.md",
+    "evidence/EG02/attempt1/result.json"
+  ],
+  "last_verified_commit": "dcd884a825c28c6d8ed2a4a832bce65e251ced9b"
 }
