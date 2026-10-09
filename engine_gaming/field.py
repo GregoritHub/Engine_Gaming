@@ -101,7 +101,7 @@ class Field:
                 own['phase']=pending['after']
                 if pending['after']=='inspect_shared':own['shared_target']=pending['source']
         elif kind=='theorize':
-            self._publish(actor,d['public.0']);own['phase']='await' if own['cycles']==0 else 'done'
+            self._publish(actor,d['public.0']);own['phase']='await'
         elif kind=='apply':
             own['used']=(*own['used'],pending['source']);own['cycles']+=1;own['phase']='inspect' if own['forward'] else 'done'
             for observer in self.actors:

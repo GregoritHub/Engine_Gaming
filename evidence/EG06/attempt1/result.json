@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "source_unchanged": true,
+  "results": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "-v",
+        "tests.test_continuation",
+        "tests.test_field.Connections.test_partial_processing_and_restore"
+      ],
+      "exit_code": 0,
+      "seconds": 156.68349210099404,
+      "log": "00.log"
+    }
+  ]
+}

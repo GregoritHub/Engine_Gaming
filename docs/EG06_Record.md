@@ -1,0 +1,11 @@
+# EG06 accepted retained development and continuation
+
+Input EG05 a6b0e2b488e140f068819a4417547a4660074140. Prospective EG06_Continuation_Contract_v2.md. Added session.py and development_adapter.py; field now waits for a later new source after forwarding, preserving used-source identities. tests/test_continuation.py exercises exact replay, forgery, duplicate commands, cancellation, new episode, relevant/irrelevant history and acquired capability.
+
+Command: python tools/verify_batch.py EG06 attempt1 tests.test_continuation tests.test_field.Connections.test_partial_processing_and_restore. Seven methods passed, exit0, source frozen unchanged; no failed candidate. Environment, hashes and logs in evidence/EG06/attempt1. Raw native trained-capacity checkpoint and audit, plus a 1,200-turn continued session and activity metrics in evidence/EG06/capacity-* and continuation-*.
+
+New game saves reconstruct every declared command from finite genesis and compare full native and field bytes. Trusted v1 field evidence remains readable and exact-continuation tested; it is deliberately not accepted as an untrusted user save. JSON duplicate keys, forged state and command-identity substitution refuse. Duplicate commands cause no further work. Cancellation keeps costs.
+
+Two independent observed guarded-response episodes and paid reorganization produce actual native capacity. It supports a new target where the untrained control waits; renewed danger still waits and original attribution survives. Earlier retained output is used to form Alice's later proposal. The continued episode reaches a legitimate zero-material-command stop after further consumption, rather than inventing supply. Of 1,200 scheduled turns, 1,036 were idle: this is a finite scenario, not evidence for indefinitely sustained activity. Exact costs and histories remain in the checkpoint. An undelivered ornament does not change local continuation; a paid scoped correction does.
+
+Relationships are the retained directed field and scoped partner/opportunity records. Native obligation effects, correction scope and all native retained records persist; broad promises/institution gameplay remains beyond this slice. Decision accepted; EG07 eligible.

@@ -1,0 +1,12 @@
+test_acquired_capacity_depends_on_independent_observed_practice (tests.test_continuation.Persistence.test_acquired_capacity_depends_on_independent_observed_practice) ... ok
+test_cancel_keeps_spending_and_stops_reward (tests.test_continuation.Persistence.test_cancel_keeps_spending_and_stops_reward) ... ok
+test_exact_partial_replay_and_future (tests.test_continuation.Persistence.test_exact_partial_replay_and_future) ... ok
+test_forged_save_and_duplicate_commands (tests.test_continuation.Persistence.test_forged_save_and_duplicate_commands) ... ok
+test_new_episode_reuses_generated_experience (tests.test_continuation.Persistence.test_new_episode_reuses_generated_experience) ... ok
+test_relevant_correction_and_irrelevant_history (tests.test_continuation.Persistence.test_relevant_correction_and_irrelevant_history) ... ok
+test_partial_processing_and_restore (tests.test_field.Connections.test_partial_processing_and_restore) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 156.533s
+
+OK
